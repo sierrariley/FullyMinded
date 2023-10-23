@@ -12,4 +12,9 @@
     <string name="menu_slideshow">Slideshow</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title">Fully Minded</string>
+    <string name="therapy">Therapy</string>
+    <string name="therapyDescript">Therapy’s main focus is on mental health as well as emotional healing. A patient would go to therapy if there was any concern with their mental health such as depression, anxiety, or any form of mental disorders. </string>
+    <string name="lifeCoach">Life Coaching</string>
+    <string name="lifeDecript">Life coaches do not have mental health training and cannot diagnose, but are there to help you set and achieve goals.</string>
 </resources>

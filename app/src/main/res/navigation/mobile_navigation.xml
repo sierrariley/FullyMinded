@@ -29,4 +29,9 @@
         android:name="com.example.fullyminded.CheckInFragment"
         android:label="fragment_check_in"
         tools:layout="@layout/fragment_check_in" />
+    <fragment
+        android:id="@+id/nav_counselor"
+        android:name="com.example.fullyminded.CounselorsFragment"
+        android:label="Counselors"
+        tools:layout="@layout/fragment_counselors" />
 </navigation>

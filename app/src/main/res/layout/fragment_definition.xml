@@ -1,14 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".DefinitionFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/therapy"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/therapy"
+        android:textSize="34sp" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/therapyDescript"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="@string/therapyDescript"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/lifeCoach"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/lifeCoach"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/lifeCoachDescript"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/lifeDecript"
+        android:textSize="16sp" />
+</LinearLayout>
