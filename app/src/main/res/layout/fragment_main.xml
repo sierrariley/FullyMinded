@@ -7,34 +7,18 @@
     android:orientation="vertical"
     tools:context=".MainFragment">
 
-    <LinearLayout
+    <ImageView
+        android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:orientation="horizontal">
+        android:src="@drawable/fully" />
 
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:padding="10dp"
-            android:src="@drawable/fully" />
-
-        <TextView
-            android:id="@+id/mainTitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="cursive"
-            android:paddingTop="10dp"
-            android:text="@string/title"
-            android:textSize="60sp" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/counsel"
+    <TextView
+        android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="300dp"
+        android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:src="@drawable/counseling" />
+        android:text="TextView" />
 
 </LinearLayout>
