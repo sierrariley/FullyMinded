@@ -88,13 +88,13 @@ public class CounselorsFragment extends Fragment {
 
 
 //        Method 1:
-        ArrayAdapter adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, counselorTypeItems);
-        listView.setAdapter(adapter);
+//        ArrayAdapter adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, counselorTypeItems);
+//        listView.setAdapter(adapter);
 
         //Method 2:
 
-//        CustomListViewAdapter adapter = new CustomListViewAdapter(getContext(), counselorTypeItems);
-//        listView.setAdapter(adapter);
+        CustomListViewAdapter adapter = new CustomListViewAdapter(getContext(), counselorTypeItems);
+        listView.setAdapter(adapter);
 
 
 
