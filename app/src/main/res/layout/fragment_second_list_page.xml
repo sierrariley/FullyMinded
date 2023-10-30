@@ -4,35 +4,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Fragments.DefinitionFragment">
+    tools:context=".ListView.SecondListPageFragment">
+
 
     <TextView
-        android:id="@+id/therapy"
+        android:id="@+id/counselorName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/therapy"
+        android:text="@string/hello_blank_fragment"
+        android:textAlignment="center"
+        android:textColor="@color/taupe"
         android:textSize="34sp" />
 
     <TextView
-        android:id="@+id/therapyDescript"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:text="@string/therapyDescript"
-        android:textSize="16sp" />
-
-    <TextView
-        android:id="@+id/lifeCoach"
+        android:id="@+id/counselorCreds"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
-        android:text="@string/lifeCoach"
-        android:textSize="34sp" />
+        android:text="TextView"
+        android:textAlignment="center" />
 
     <TextView
-        android:id="@+id/lifeCoachDescript"
+        android:id="@+id/description"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/lifeDecript"
-        android:textSize="16sp" />
+        android:text="Description"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/counselorDescript"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
 </LinearLayout>
