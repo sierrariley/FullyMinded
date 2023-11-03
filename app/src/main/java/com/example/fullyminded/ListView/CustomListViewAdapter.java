@@ -28,9 +28,9 @@ public class CustomListViewAdapter extends ArrayAdapter<CounselorTypeItems> {
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         CounselorTypeItems item = getItem(position);
         if(convertView == null){
-            convertView = LayoutInflater.from(getContext()).inflate(R.layout.fragment_item_view, parent, false);
-            TextView name = convertView.findViewById(R.id.name);
-            name.setText(item.getName());
+            convertView = LayoutInflater.from(getContext()).inflate(R.layout.fragment_recycler_view, parent, false);
+//            TextView specialty = convertView.findViewById(R.id.specialty);
+//            specialty.setText(item.getSpecialty());
         }
         return convertView;
     }

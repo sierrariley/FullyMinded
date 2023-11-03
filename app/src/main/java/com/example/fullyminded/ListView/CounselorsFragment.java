@@ -68,8 +68,6 @@ public class CounselorsFragment extends Fragment {
         }
     }
 
-//    public ArrayList<CounselorTypeItems> counselorTypeItems = new ArrayList<>();
-
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -77,38 +75,17 @@ public class CounselorsFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_counselors, container, false);
         ListView listView = view.findViewById(R.id.counselorList);
         ArrayList<CounselorTypeItems> counselorTypeItems = new ArrayList<>();
-        counselorTypeItems.add(new CounselorTypeItems("Marcus Walls", "MSW: Masters of Social Work", "Marcus Walls has been practicing for 5 years and specializes in mental health issues such as depression and anxiety."));
-        counselorTypeItems.add(new CounselorTypeItems("Amanda Renaud", "PhD Social Work (University of Windsor)", "Amanda has been practicing mental health therapy for 8 years. She specialized in childhood trauma. Targeting the pas traumas of our past that still affect us today."));
-        counselorTypeItems.add(new CounselorTypeItems("Melissa Wilson", "Psyd.D. in Clinical Psychology", "Melissa Wilson has a heart for family counseling. She specializes in Marriage issues, as well as parental issue. "));
-        counselorTypeItems.add(new CounselorTypeItems("David Harris", "ICF Certified ", "David Harris is a certified Life Coach focusing on helping others organize their live. You have too muc on your plate? David has the tools and knowledge to help sort out your life"));
-        counselorTypeItems.add(new CounselorTypeItems("Amber Byrne", "ICF Certified ", "Amber understands the pressures life can bring. She specializes in finding setting realistic goals and helping you journey to achieving those goals"));
-        counselorTypeItems.add(new CounselorTypeItems("Joshua Battle", "ICF Certified", "Joshua has a wide range of specialties. Whether its for school, career or just personal well being, Joshua is here to assist you."));
-
-        TextView description = view.findViewById(R.id.descriptCounselors);
-
+        counselorTypeItems.add(new CounselorTypeItems("Mental Illness"));
+        counselorTypeItems.add(new CounselorTypeItems("Mental Illness"));
+        counselorTypeItems.add(new CounselorTypeItems("Mental Illness"));
 
 //        Method 1:
 //        ArrayAdapter adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, counselorTypeItems);
 //        listView.setAdapter(adapter);
 
         //Method 2:
-
         CustomListViewAdapter adapter = new CustomListViewAdapter(getContext(), counselorTypeItems);
         listView.setAdapter(adapter);
-
-
-
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                Navigation.findNavController(view).navigate(R.id.action_nav_counselor_to_secondListPageFragment);
-            description.setText(((CounselorTypeItems)listView.getItemAtPosition(i)).getDescription());
-            }
-        });
-
-
-
-
 
         return view;
     }
