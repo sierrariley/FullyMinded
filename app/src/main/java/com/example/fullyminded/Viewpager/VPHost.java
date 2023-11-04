@@ -1,12 +1,15 @@
-package com.example.fullyminded;
+package com.example.fullyminded.Viewpager;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.viewpager2.widget.ViewPager2;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.fullyminded.R;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,7 +17,7 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class VPHost extends Fragment {
-
+    ViewPager2 viewPager2;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -59,6 +62,10 @@ public class VPHost extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_v_p_host, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_v_p_host, container, false);
+        viewPager2 = view.findViewById(R.id.tipsViewPager);
+        viewPager2.setAdapter(new CustomViewPagerAdapter(getActivity()));
+        return view;
     }
 }

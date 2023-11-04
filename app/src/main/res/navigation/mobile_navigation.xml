@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/nav_counselorProfile">
+    app:startDestination="@id/nav_tips">
     <fragment
         android:id="@+id/nav_main"
         android:name="com.example.fullyminded.Fragments.MainFragment"
@@ -27,7 +27,7 @@
     <fragment
         android:id="@+id/nav_check"
         android:name="com.example.fullyminded.Fragments.CheckInFragment"
-        android:label="fragment_check_in"
+        android:label="Daily Check In"
         tools:layout="@layout/fragment_check_in" />
     <fragment
         android:id="@+id/nav_counselor"
@@ -49,7 +49,7 @@
         tools:layout="@layout/fragment_counselor_profile" />
     <fragment
         android:id="@+id/nav_tips"
-        android:name="com.example.fullyminded.VPHost"
-        android:label="fragment_v_p_host"
+        android:name="com.example.fullyminded.Viewpager.VPHost"
+        android:label="Tips for Sessions"
         tools:layout="@layout/fragment_v_p_host" />
 </navigation>
