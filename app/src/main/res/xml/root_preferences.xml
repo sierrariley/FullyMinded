@@ -8,7 +8,12 @@
             app:key="grid_view"
             app:title="Grid Layout"
             app:defaultValue="false"/>
-
+        <ListPreference
+            android:defaultValue="1"
+            android:entries="@array/Layout"
+            android:entryValues="@array/Layout"
+            android:key="list_preference_1"
+            android:title="Counselor Layout" />
 
 
     </PreferenceCategory>

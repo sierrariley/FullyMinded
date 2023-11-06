@@ -3,22 +3,18 @@ package com.example.fullyminded.Recyclerview;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
 
-import android.view.ContextMenu;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
+import android.widget.CompoundButton;
+import android.widget.Switch;
 
 import com.example.fullyminded.JavaBeans.Counselor;
-import com.example.fullyminded.JavaBeans.CounselorTypeItems;
-import com.example.fullyminded.ListView.CustomListViewAdapter;
 import com.example.fullyminded.R;
-import com.google.android.material.carousel.CarouselLayoutManager;
 
 import java.util.ArrayList;
 
@@ -68,13 +64,17 @@ public class CounselorProfileFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
-
+//    private Switch layoutSwitch;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
+        setHasOptionsMenu(true);
+
         View view = inflater.inflate(R.layout.fragment_counselor_profile, container, false);
+
+
         ArrayList<Counselor> counselor = new ArrayList<>();
         counselor.add(new Counselor("Marcus Walls", "MSW: Masters of Social Work"));
         counselor.add(new Counselor("Amanda Renaud", "PhD Social Work (University of Windsor)"));
@@ -83,14 +83,6 @@ public class CounselorProfileFragment extends Fragment {
         counselor.add(new Counselor("David Harris", "ICF Certified"));
         counselor.add(new Counselor("Amber Byrne", "ICF Certified"));
 
-//        ArrayList<CounselorTypeItems> counselorTypeItems = new ArrayList<>();
-//        counselorTypeItems.add(new CounselorTypeItems("Mental Illness"));
-//        counselorTypeItems.add(new CounselorTypeItems("Mental Illness"));
-//        counselorTypeItems.add(new CounselorTypeItems("Mental Illness"));
-//
-//        ListView listView = view.findViewById(R.id.listView2);
-//        CustomListViewAdapter adapter = new CustomListViewAdapter(getContext(), counselorTypeItems);
-//        listView.setAdapter(adapter);
 
         RecyclerView recyclerView = view.findViewById(R.id.recycle);
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
@@ -99,6 +91,13 @@ public class CounselorProfileFragment extends Fragment {
 
 
 
+
+
+
+
+
         return view;
     }
-}
+
+
+    }

@@ -47,4 +47,9 @@
         android:name="com.example.fullyminded.Recyclerview.CounselorProfileFragment"
         android:label="Counselors"
         tools:layout="@layout/fragment_counselor_profile" />
+    <fragment
+        android:id="@+id/settings"
+        android:name="com.example.fullyminded.Settings"
+        android:label="fragment_settings"
+        tools:layout="@layout/fragment_settings" />
 </navigation>
