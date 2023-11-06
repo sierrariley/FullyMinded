@@ -29,29 +29,27 @@
         android:layout_marginTop="20dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <LinearLayout
+    <RadioGroup
+        android:id="@+id/slepRadioButtons"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="5"
+        android:layout_weight="2"
         android:orientation="horizontal">
 
-        <CheckBox
+        <RadioButton
             android:id="@+id/sleepYes"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="Yes"
-            tools:layout_editor_absoluteY="119dp" />
+            android:text="Yes" />
 
-        <CheckBox
+        <RadioButton
             android:id="@+id/sleepNo"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="No"
-            tools:layout_editor_absoluteX="105dp"
-            tools:layout_editor_absoluteY="119dp" />
-    </LinearLayout>
+            android:text="No" />
+    </RadioGroup>
 
     <TextView
         android:id="@+id/feelQuestion"
@@ -64,14 +62,32 @@
         android:textSize="16sp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <SeekBar
-        android:id="@+id/feelSeekBar"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="5"
-        android:indeterminate="false"
-        android:max="10"
-        tools:layout_editor_absoluteY="227dp" />
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/seekBarTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="0"
+            android:textAlignment="center"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:indeterminate="false"
+            android:max="100"
+            tools:layout_editor_absoluteY="227dp" />
+
+    </LinearLayout>
 
     <TextView
         android:id="@+id/affirmQuestion"
@@ -84,29 +100,26 @@
         android:layout_marginTop="20dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <LinearLayout
+    <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="5"
         android:orientation="horizontal">
 
-        <CheckBox
-            android:id="@+id/affirmYes"
-            android:layout_width="wrap_content"
+        <RadioButton
+            android:id="@+id/affrimYes"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="Yes"
-            tools:layout_editor_absoluteY="325dp" />
+            android:text="Yes" />
 
-        <CheckBox
-            android:id="@+id/affirmNo"
-            android:layout_width="wrap_content"
+        <RadioButton
+            android:id="@+id/affrimNo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="No"
-            tools:layout_editor_absoluteX="94dp"
-            tools:layout_editor_absoluteY="325dp" />
-    </LinearLayout>
+            android:text="No" />
+    </RadioGroup>
 
     <TextView
         android:id="@+id/focusQuestion"
@@ -119,30 +132,26 @@
         android:layout_marginTop="20dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <LinearLayout
+    <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="5"
         android:orientation="horizontal">
 
-        <CheckBox
+        <RadioButton
             android:id="@+id/focusYes"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="Yes"
-            tools:layout_editor_absoluteY="471dp" />
+            android:text="Yes" />
 
-        <CheckBox
+        <RadioButton
             android:id="@+id/focusNo"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="2"
-            android:text="No"
-            tools:layout_editor_absoluteX="94dp"
-            tools:layout_editor_absoluteY="471dp" />
-
-    </LinearLayout>
+            android:text="No" />
+    </RadioGroup>
 
     <TextView
         android:id="@+id/activityQuestion"
@@ -155,28 +164,32 @@
         android:layout_marginTop="20dp"
         tools:layout_editor_absoluteX="0dp" />
 
-    <LinearLayout
+    <RadioGroup
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="5"
-        android:orientation="horizontal">
+        android:orientation="horizontal" >
 
-        <CheckBox
+        <RadioButton
             android:id="@+id/activityYes"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="Yes"
-            tools:layout_editor_absoluteY="600dp" />
+            android:layout_weight="1"
+            android:text="Yes" />
 
-        <CheckBox
+        <RadioButton
             android:id="@+id/activityNo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:text="No"
-            tools:layout_editor_absoluteX="94dp"
-            tools:layout_editor_absoluteY="600dp" />
-    </LinearLayout>
+            android:layout_weight="1"
+            android:text="No" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/resultsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="Send Results" />
 
 </LinearLayout>

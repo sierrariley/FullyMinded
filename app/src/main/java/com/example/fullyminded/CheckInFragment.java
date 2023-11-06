@@ -1,5 +1,7 @@
 package com.example.fullyminded;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -7,6 +9,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.SeekBar;
+import android.widget.TextView;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -54,11 +61,108 @@ public class CheckInFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+    SeekBar feelSeekBar;
+    TextView seekBarTextView;
+    RadioButton sleepYes;
+    RadioButton sleepNo;
+    RadioButton affirmYes;
+    RadioButton affirmNo;
+    RadioButton focusYes;
+    RadioButton focusNo;
+    RadioButton activityYes;
+    RadioButton activityNo;
+
+    RadioGroup sleepGroup;
+
+    int percent = 0;
+    boolean sleep;
+    boolean affirm;
+    boolean focus;
+    boolean activity;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_check_in, container, false);
+        View view = inflater.inflate(R.layout.fragment_check_in, container, false);
+
+        feelSeekBar = view.findViewById(R.id.seekBar);
+        seekBarTextView = view.findViewById(R.id.seekBarTextView);
+        sleepYes = view.findViewById(R.id.sleepYes);
+        sleepNo = view.findViewById(R.id.sleepNo);
+        affirmYes = view.findViewById(R.id.affrimYes);
+        affirmNo = view.findViewById(R.id.affrimNo);
+        focusYes = view.findViewById(R.id.focusYes);
+        focusNo = view.findViewById(R.id.focusNo);
+        activityYes = view.findViewById(R.id.activityYes);
+        activityNo = view.findViewById(R.id.activityNo);
+
+        sleepGroup = view.findViewById(R.id.slepRadioButtons);
+
+        if(sleepYes.isChecked()){
+            sleep = true;
+        }else{
+            sleep = false;
+        }
+
+        if(affirmYes.isChecked()){
+            affirm = true;
+        }else{
+            affirm = false;
+        }
+
+        if(focusYes.isChecked()){
+            focus = true;
+        }else{
+            focus = false;
+        }
+
+        if(activityYes.isChecked()){
+            activity = true;
+        }else{
+            activity = false;
+        }
+
+
+        feelSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
+                seekBarTextView.setText(i + " %");
+                percent = i;
+
+            }
+
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+
+            }
+
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+
+            }
+        });
+
+
+        Button resultsButton = view.findViewById(R.id.resultsButton);
+        resultsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Intent.ACTION_SENDTO);
+                i.setData(Uri.parse("mailto:"));
+                i.putExtra(Intent.EXTRA_TEXT, "Here is you Daily Check in results: " +
+                        "1. Did you get enough sleep? " + sleep +
+                        "\n I am feeling: " + percent + "%" +
+                        "\n I recited my affirmations today?: " + affirm +
+                        "\n Have I had a hard time focusing on tasks?: " + focus +
+                        "\n I have engaged in physical activity today: " + activity);
+                startActivity(i);
+            }
+        });
+
+
+
+        return view;
     }
 }
