@@ -27,7 +27,7 @@
     <fragment
         android:id="@+id/nav_check"
         android:name="com.example.fullyminded.CheckInFragment"
-        android:label="fragment_check_in"
+        android:label="Daily Check-In"
         tools:layout="@layout/fragment_check_in" />
     <fragment
         android:id="@+id/nav_counselor"

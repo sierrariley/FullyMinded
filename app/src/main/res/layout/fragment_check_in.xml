@@ -1,14 +1,182 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".CheckInFragment">
 
-    <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/checkTitle"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="Check-In Questionnaire"
+        android:textAlignment="center"
+        android:textColor="@color/taupe"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/sleepQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="Did you get enough sleep last night? (6-8hours)"
+        android:textColor="@color/blueBlack"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/sleepYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Yes"
+            tools:layout_editor_absoluteY="119dp" />
+
+        <CheckBox
+            android:id="@+id/sleepNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="No"
+            tools:layout_editor_absoluteX="105dp"
+            tools:layout_editor_absoluteY="119dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/feelQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="I am Feling..."
+        android:layout_marginTop="20dp"
+        android:textColor="@color/blueBlack"
+        android:textSize="16sp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <SeekBar
+        android:id="@+id/feelSeekBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:indeterminate="false"
+        android:max="10"
+        tools:layout_editor_absoluteY="227dp" />
+
+    <TextView
+        android:id="@+id/affirmQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="Did you recite your daily affirmations?"
+        android:textColor="@color/blueBlack"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/affirmYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Yes"
+            tools:layout_editor_absoluteY="325dp" />
+
+        <CheckBox
+            android:id="@+id/affirmNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="No"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="325dp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/focusQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="Did you find it difficult to focus certain tasks?"
+        android:textColor="@color/blueBlack"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/focusYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Yes"
+            tools:layout_editor_absoluteY="471dp" />
+
+        <CheckBox
+            android:id="@+id/focusNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="No"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="471dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activityQuestion"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:text="Did you partake in physical activity today?"
+        android:textColor="@color/blueBlack"
+        android:textSize="16sp"
+        android:layout_marginTop="20dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/activityYes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Yes"
+            tools:layout_editor_absoluteY="600dp" />
+
+        <CheckBox
+            android:id="@+id/activityNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="No"
+            tools:layout_editor_absoluteX="94dp"
+            tools:layout_editor_absoluteY="600dp" />
+    </LinearLayout>
+
+</LinearLayout>
