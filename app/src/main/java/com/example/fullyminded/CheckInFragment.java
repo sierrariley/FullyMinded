@@ -75,10 +75,10 @@ public class CheckInFragment extends Fragment {
     RadioGroup sleepGroup;
 
     int percent = 0;
-    boolean sleep;
-    boolean affirm;
-    boolean focus;
-    boolean activity;
+    String sleep;
+    String affirm;
+    String focus;
+    String activity;
 
 
     @Override
@@ -101,27 +101,27 @@ public class CheckInFragment extends Fragment {
         sleepGroup = view.findViewById(R.id.slepRadioButtons);
 
         if(sleepYes.isChecked()){
-            sleep = true;
+            sleep = "Yes";
         }else{
-            sleep = false;
+            sleep = "No";
         }
 
         if(affirmYes.isChecked()){
-            affirm = true;
+            affirm = "Yes";
         }else{
-            affirm = false;
+            affirm = "No";
         }
 
         if(focusYes.isChecked()){
-            focus = true;
+            focus = "Yes";
         }else{
-            focus = false;
+            focus = "No";
         }
 
         if(activityYes.isChecked()){
-            activity = true;
+            activity = "Yes";
         }else{
-            activity = false;
+            activity = "No";
         }
 
 
@@ -148,15 +148,17 @@ public class CheckInFragment extends Fragment {
         Button resultsButton = view.findViewById(R.id.resultsButton);
         resultsButton.setOnClickListener(new View.OnClickListener() {
             @Override
+
+            //Send results to Yourself to track and give to therapist or life coach at sessions
             public void onClick(View view) {
                 Intent i = new Intent(Intent.ACTION_SENDTO);
                 i.setData(Uri.parse("mailto:"));
-                i.putExtra(Intent.EXTRA_TEXT, "Here is you Daily Check in results: " +
-                        "1. Did you get enough sleep? " + sleep +
-                        "\n I am feeling: " + percent + "%" +
-                        "\n I recited my affirmations today?: " + affirm +
-                        "\n Have I had a hard time focusing on tasks?: " + focus +
-                        "\n I have engaged in physical activity today: " + activity);
+                i.putExtra(Intent.EXTRA_TEXT, "Here is you Daily Check in results: "  +
+                        "\n 1. Did your get enough sleep? " + sleep +
+                        "\n 2. I am feeling: " + percent + "%" +
+                        "\n 3. I recited my affirmations today?: " + affirm +
+                        "\n 4. Have I had a hard time focusing on tasks?: " + focus +
+                        "\n 5. I have engaged in physical activity today: " + activity);
                 startActivity(i);
             }
         });
