@@ -1,8 +1,11 @@
 package com.example.fullyminded.Recyclerview;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.preference.Preference;
+import androidx.preference.PreferenceManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.recyclerview.widget.StaggeredGridLayoutManager;
@@ -85,10 +88,19 @@ public class CounselorProfileFragment extends Fragment {
 
 
         RecyclerView recyclerView = view.findViewById(R.id.recycle);
-        recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+
 //        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(new CounselorRecycleAdapter(counselor));
 
+
+      SharedPreferences preferences =  PreferenceManager.getDefaultSharedPreferences(getContext());
+
+      Boolean switchPreference = preferences.getBoolean("grid_view", false);
+if(switchPreference){
+    recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
+}else{
+    recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+}
 
 
 
