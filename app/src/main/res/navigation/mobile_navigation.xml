@@ -30,26 +30,19 @@
         android:label="Daily Check In"
         tools:layout="@layout/fragment_check_in" />
     <fragment
-        android:id="@+id/nav_counselor"
-        android:name="com.example.fullyminded.ListView.CounselorsFragment"
-        tools:layout="@layout/fragment_counselors">
-        <action
-            android:id="@+id/action_nav_counselor_to_secondListPageFragment"
-            app:destination="@id/nav_second" />
-    </fragment>
-    <fragment
-        android:id="@+id/nav_second"
-        android:name="com.example.fullyminded.ListView.SecondListPageFragment"
-        android:label="Counselor"
-        tools:layout="@layout/fragment_second_list_page" />
-    <fragment
         android:id="@+id/nav_counselorProfile"
         android:name="com.example.fullyminded.Recyclerview.CounselorProfileFragment"
         android:label="Counselors"
         tools:layout="@layout/fragment_counselor_profile" />
     <fragment
+
         android:id="@+id/nav_tips"
         android:name="com.example.fullyminded.Viewpager.VPHost"
         android:label="Tips for Sessions"
         tools:layout="@layout/fragment_v_p_host" />
+
+<!--        android:id="@+id/nav_settings"-->
+<!--        android:name="com.example.fullyminded.SettingsFragment"-->
+<!--        android:label="Settings" />-->
+
 </navigation>

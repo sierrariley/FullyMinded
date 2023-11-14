@@ -10,7 +10,6 @@
             app:defaultValue="false"/>
 
 
-
     </PreferenceCategory>
 
 </PreferenceScreen>
