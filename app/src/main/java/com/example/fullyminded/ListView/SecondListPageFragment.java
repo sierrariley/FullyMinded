@@ -7,13 +7,9 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ListView;
 import android.widget.TextView;
 
-import com.example.fullyminded.JavaBeans.CounselorTypeItems;
 import com.example.fullyminded.R;
-
-import java.util.ArrayList;
 
 /**
  * A simple {@link Fragment} subclass.

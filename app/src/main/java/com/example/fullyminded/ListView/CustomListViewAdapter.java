@@ -10,23 +10,22 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import com.example.fullyminded.JavaBeans.CounselorTypeItems;
+import com.example.fullyminded.JavaBeans.TermTypeItems;
 import com.example.fullyminded.R;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class CustomListViewAdapter extends ArrayAdapter<CounselorTypeItems> {
+public class CustomListViewAdapter extends ArrayAdapter<TermTypeItems> {
 
 
-    public CustomListViewAdapter(@NonNull Context context, @NonNull List<CounselorTypeItems> objects) {
+    public CustomListViewAdapter(@NonNull Context context, @NonNull List<TermTypeItems> objects) {
         super(context,0,  objects);
     }
 
     @NonNull
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        CounselorTypeItems item = getItem(position);
+        TermTypeItems item = getItem(position);
         if(convertView == null){
             convertView = LayoutInflater.from(getContext()).inflate(R.layout.fragment_item_view, parent, false);
             TextView name = convertView.findViewById(R.id.name);

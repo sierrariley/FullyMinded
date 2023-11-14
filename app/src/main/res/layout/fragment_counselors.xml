@@ -4,26 +4,14 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ListView.CounselorsFragment">
+    tools:context=".ListView.TermFragment">
 
-    <LinearLayout
+    <ListView
+        android:id="@+id/termList"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
+        android:layout_weight="2">
 
-        <ListView
-            android:id="@+id/counselorList"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="2">
+    </ListView>
 
-        </ListView>
-
-        <TextView
-            android:id="@+id/descriptCounselors"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
-            android:paddingLeft="10dp" />
-    </LinearLayout>
 </LinearLayout>

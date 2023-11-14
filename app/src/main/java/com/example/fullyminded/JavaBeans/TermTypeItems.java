@@ -1,14 +1,14 @@
 package com.example.fullyminded.JavaBeans;
 
-public class CounselorTypeItems {
+public class TermTypeItems {
     private String name;
     private String description;
-    private String credentials;
 
-    public CounselorTypeItems(String name, String credentials, String description ) {
+
+    public TermTypeItems(String name, String description ) {
         this.name = name;
         this.description = description;
-        this.credentials = credentials;
+
     }
 
     public String getName() {
@@ -27,17 +27,11 @@ public class CounselorTypeItems {
         this.description = description;
     }
 
-    public String getCredentials() {
-        return credentials;
-    }
 
-    public void setCredentials(String credentials) {
-        this.credentials = credentials;
-    }
 
     @Override
     public String toString() {
-        return name + "\n" + credentials ;
+        return name + "\n" + description ;
     }
 
 

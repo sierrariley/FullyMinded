@@ -30,10 +30,10 @@
         android:label="fragment_check_in"
         tools:layout="@layout/fragment_check_in" />
     <fragment
-        android:id="@+id/nav_counselor"
-        android:name="com.example.fullyminded.ListView.CounselorsFragment"
-        android:label="Counselors"
-        tools:layout="@layout/fragment_counselors" >
+        android:id="@+id/nav_terms"
+        android:name="com.example.fullyminded.ListView.TermFragment"
+        android:label="Terms"
+        tools:layout="@layout/fragment_counselors">
         <action
             android:id="@+id/action_nav_counselor_to_secondListPageFragment"
             app:destination="@id/nav_second" />
