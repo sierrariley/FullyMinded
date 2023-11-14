@@ -29,7 +29,7 @@
         android:name="com.example.fullyminded.Fragments.CheckInFragment"
         android:label="Daily Check In" />
     <fragment
-        android:id="@+id/settingsFragment"
+        android:id="@+id/nav_settings"
         android:name="com.example.fullyminded.SettingsFragment"
         android:label="Settings" />
     <fragment
@@ -38,48 +38,7 @@
         android:label="Sign Up"
         tools:layout="@layout/fragment_sign_up" />
 </navigation>
-<<<<<<< HEAD
-    app:startDestination="@id/nav_check">
-=======
-    app:startDestination="@id/nav_counselorProfile">
->>>>>>> development
-    <fragment
-        android:id="@+id/nav_main"
-        android:name="com.example.fullyminded.Fragments.MainFragment"
-        android:label="Fully Minded"
-        tools:layout="@layout/fragment_main" />
-    <fragment
-        android:id="@+id/nav_difference"
-        android:name="com.example.fullyminded.Fragments.DefinitionFragment"
-        android:label="Descriptions"
-        tools:layout="@layout/fragment_definition" />
-    <fragment
-        android:id="@+id/nav_profile"
-        android:name="com.example.fullyminded.Fragments.ProfileFragment"
-        android:label="Profile"
-        tools:layout="@layout/fragment_profile" />
-    <fragment
-        android:id="@+id/nav_sign"
-        android:name="com.example.fullyminded.Fragments.SignUpFragment"
-        android:label="Sign Up"
-        tools:layout="@layout/fragment_sign_up" />
-    <fragment
-        android:id="@+id/nav_check"
-<<<<<<< HEAD
-        android:name="com.example.fullyminded.CheckInFragment"
-        android:label="Daily Check-In"
-=======
-        android:name="com.example.fullyminded.Fragments.CheckInFragment"
-        android:label="fragment_check_in"
->>>>>>> development
-        tools:layout="@layout/fragment_check_in" />
-    <fragment
-        android:id="@+id/nav_counselorProfile"
-        android:name="com.example.fullyminded.Recyclerview.CounselorProfileFragment"
-        android:label="Counselors"
-        tools:layout="@layout/fragment_counselor_profile" />
-    <fragment
-        android:id="@+id/nav_settings"
-        android:name="com.example.fullyminded.SettingsFragment"
-        android:label="Settings" />
-</navigation>
+
+
+
+    
