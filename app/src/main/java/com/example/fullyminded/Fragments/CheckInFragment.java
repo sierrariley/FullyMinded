@@ -63,6 +63,8 @@ public class CheckInFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
+
     SeekBar feelSeekBar;
     TextView seekBarTextView;
     RadioButton sleepYes;
@@ -102,6 +104,7 @@ public class CheckInFragment extends Fragment {
 
         sleepGroup = view.findViewById(R.id.slepRadioButtons);
 
+        //This gives the response yes or no when sending the results in the email
         if(sleepYes.isChecked()){
             sleep = "Yes";
         }else{
@@ -127,6 +130,7 @@ public class CheckInFragment extends Fragment {
         }
 
 
+
         feelSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
@@ -147,6 +151,7 @@ public class CheckInFragment extends Fragment {
         });
 
 
+        //Create A button for email Intent
         Button resultsButton = view.findViewById(R.id.resultsButton);
         resultsButton.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -17,11 +17,11 @@
             android:icon="@drawable/ic_baseline_profile"
             android:title="Profile" />
         <item
-            android:id="@+id/nav_counselorProfile"
+            android:id="@+id/nav_counselors"
             android:icon="@drawable/ic_baseline_person_search_24"
             android:title="Counselors" />
         <item
-            android:id="@+id/nav_sign"
+            android:id="@+id/nav_signUp"
             android:icon="@drawable/ic_baseline_assignment_24"
             android:title="Sign-Up" />
         <item
