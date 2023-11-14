@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/nav_tips">
+    app:startDestination="@id/nav_main">
     <fragment
         android:id="@+id/nav_main"
         android:name="com.example.fullyminded.Fragments.MainFragment"
@@ -40,8 +40,12 @@
         android:name="com.example.fullyminded.Viewpager.VPHost"
         android:label="Tips for Sessions"
         tools:layout="@layout/fragment_v_p_host" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.fullyminded.SettingsFragment"
+        android:label="SettingsFragment" />
 
-<!--        android:id="@+id/nav_settings"-->
+    <!--        android:id="@+id/nav_settings"-->
 <!--        android:name="com.example.fullyminded.SettingsFragment"-->
 <!--        android:label="Settings" />-->
 
