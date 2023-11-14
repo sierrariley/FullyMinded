@@ -1,4 +1,4 @@
-package com.example.fullyminded;
+package com.example.fullyminded.Fragments;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -14,6 +14,8 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
+
+import com.example.fullyminded.R;
 
 /**
  * A simple {@link Fragment} subclass.

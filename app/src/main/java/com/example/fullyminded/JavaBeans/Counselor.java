@@ -1,13 +1,11 @@
-package com.example.fullyminded;
+package com.example.fullyminded.JavaBeans;
 
-public class CounselorTypeItems {
+public class Counselor {
     private String name;
-    private String description;
     private String credentials;
 
-    public CounselorTypeItems(String name, String credentials, String description ) {
+    public Counselor(String name, String credentials) {
         this.name = name;
-        this.description = description;
         this.credentials = credentials;
     }
 
@@ -17,14 +15,6 @@ public class CounselorTypeItems {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
     }
 
     public String getCredentials() {
