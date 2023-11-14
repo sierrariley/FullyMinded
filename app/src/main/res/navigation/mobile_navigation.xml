@@ -3,6 +3,41 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
+    app:startDestination="@id/nav_home">
+    <fragment
+        android:id="@+id/nav_counselors"
+        android:name="com.example.fullyminded.Recyclerview.CounselorProfileFragment"
+        android:label="Counselors"
+        tools:layout="@layout/fragment_counselor_profile" />
+    <fragment
+        android:id="@+id/nav_difference"
+        android:name="com.example.fullyminded.Fragments.DefinitionFragment"
+        android:label="Definitions"
+        tools:layout="@layout/fragment_definition" />
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.fullyminded.Fragments.MainFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/Profile"
+        android:name="com.example.fullyminded.Fragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_check"
+        android:name="com.example.fullyminded.Fragments.CheckInFragment"
+        android:label="Daily Check In" />
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.fullyminded.SettingsFragment"
+        android:label="Settings" />
+    <fragment
+        android:id="@+id/nav_signUp"
+        android:name="com.example.fullyminded.Fragments.SignUpFragment"
+        android:label="Sign Up"
+        tools:layout="@layout/fragment_sign_up" />
+</navigation>
 <<<<<<< HEAD
     app:startDestination="@id/nav_check">
 =======
