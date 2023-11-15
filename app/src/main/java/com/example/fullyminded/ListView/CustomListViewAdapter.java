@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 import com.example.fullyminded.JavaBeans.TermTypeItems;
 import com.example.fullyminded.R;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CustomListViewAdapter extends ArrayAdapter<TermTypeItems> {

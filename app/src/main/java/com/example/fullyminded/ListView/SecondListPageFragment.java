@@ -64,9 +64,11 @@ public class SecondListPageFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_second_list_page, container, false);
-        TextView name = view.findViewById(R.id.counselorName);
-        TextView creds = view.findViewById(R.id.counselorCreds);
-        TextView description = view.findViewById(R.id.counselorDescript);
+
+        Bundle extras = getArguments();
+        if (extras != null) {
+
+        }
 
 
 

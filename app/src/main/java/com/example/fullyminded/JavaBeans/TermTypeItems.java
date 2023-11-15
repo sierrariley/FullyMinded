@@ -1,8 +1,9 @@
 package com.example.fullyminded.JavaBeans;
 
 public class TermTypeItems {
+    private static String description;
     private String name;
-    private String description;
+//    private String description;
 
 
     public TermTypeItems(String name, String description ) {
@@ -19,7 +20,7 @@ public class TermTypeItems {
         this.name = name;
     }
 
-    public String getDescription() {
+    public static String getDescription() {
         return description;
     }
 
