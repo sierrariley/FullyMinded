@@ -85,7 +85,9 @@ public class SignUpFragment extends Fragment {
         webButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = 
+                Uri places = Uri.parse("geo:0,0?q= therapy, life coach, counseling");
+                Intent i = new Intent(Intent.ACTION_VIEW, places);
+                startActivity(i);
             }
         });
 
