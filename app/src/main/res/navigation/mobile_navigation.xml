@@ -25,8 +25,8 @@
         android:label="Sign Up"
         tools:layout="@layout/fragment_sign_up" >
         <action
-            android:id="@+id/action_nav_sign_to_callFragment"
-            app:destination="@id/nav_form" />
+            android:id="@+id/action_nav_sign_to_formFragment"
+            app:destination="@id/formFragment" />
     </fragment>
     <fragment
         android:id="@+id/nav_check"
@@ -48,8 +48,8 @@
         android:label="Counselor"
         tools:layout="@layout/fragment_second_list_page" />
     <fragment
-        android:id="@+id/nav_form"
-        android:name="com.example.fullyminded.FormFragment"
-        android:label="Book Appt."
+        android:id="@+id/formFragment"
+        android:name="com.example.fullyminded.Fragments.FormFragment"
+        android:label="fragment_call"
         tools:layout="@layout/fragment_call" />
 </navigation>

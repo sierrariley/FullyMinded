@@ -1,12 +1,16 @@
 package com.example.fullyminded.Fragments;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 
 import com.example.fullyminded.R;
 
@@ -61,6 +65,38 @@ public class SignUpFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sign_up, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_sign_up, container, false);
+
+        Button call = view.findViewById(R.id.emergencyButton);
+        call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Intent.ACTION_DIAL);
+                i.setData(Uri.parse("tel:1-833-456-4566"));
+//                if(i.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(i);
+//                }
+
+            }
+        });
+
+        Button webButton = view.findViewById(R.id.webButton);
+        webButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = 
+            }
+        });
+
+
+        Button formButton = view.findViewById(R.id.formButton);
+        formButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_nav_sign_to_formFragment);
+            }
+        });
+        return view;
     }
 }

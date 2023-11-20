@@ -1,4 +1,4 @@
-package com.example.fullyminded;
+package com.example.fullyminded.Fragments;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -11,6 +11,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+
+import com.example.fullyminded.R;
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -66,26 +69,7 @@ public class FormFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_call, container, false);
 
-       Button call = view.findViewById(R.id.signUpCallButton);
-       call.setOnClickListener(new View.OnClickListener() {
-           @Override
-           public void onClick(View view) {
-               Intent i = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:5191857439"));
-//               if(i.resolveActivity(getPackageManager()) != null){
-                   startActivity(i);
-//               }
 
-           }
-       });
-
-
-        Button formButton = view.findViewById(R.id.formButton);
-        formButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_nav_sign_to_callFragment);
-            }
-        });
 
 
         return view;
