@@ -69,7 +69,7 @@ public class FormFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_call, container, false);
 
-
+        //getDateTextAppearance
 
 
         return view;

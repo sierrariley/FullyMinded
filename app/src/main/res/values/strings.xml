@@ -22,4 +22,5 @@
     <string name="bookClose">BOOK W/NEAR BY FACILITY</string>
     <string name="bookFullytext">To book with FullyMinded Online services:</string>
     <string name="inperson">To book an in person appointment, click button below to find close Therapy Facilities </string>
+    <string name="looking">What are you looking for?:</string>
 </resources>
