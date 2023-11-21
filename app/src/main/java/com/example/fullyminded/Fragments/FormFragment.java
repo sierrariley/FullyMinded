@@ -11,9 +11,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.RadioButton;
 
 import com.example.fullyminded.R;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputEditText;
+
+import org.w3c.dom.Text;
+
+import java.util.Date;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +67,13 @@ public class FormFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+    RadioButton mentalHealth;
+    RadioButton lifeCoach;
+    RadioButton insuranceYes;
+    RadioButton insuranceNo;
+    TextInputEditText name;
+    TextInputEditText age;
+    String choice;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -69,7 +82,40 @@ public class FormFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_call, container, false);
 
+        mentalHealth = view.findViewById(R.id.mentalHealth);
+        lifeCoach = view.findViewById(R.id.lifeCoachCheck);
+        insuranceYes = view.findViewById(R.id.insuranceYes);
+        insuranceNo = view.findViewById(R.id.insuranceNo);
+        name = view.findViewById(R.id.nameFill);
+        age = view.findViewById(R.id.ageTextField);
+
+        if(mentalHealth.isChecked()){
+            choice = "Mental Health";
+        }else{
+            choice = "Life Coaching";
+        }
+
+        Button sendButton = view.findViewById(R.id.sendRequestButton);
+
+        sendButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Intent.ACTION_SENDTO);
+                i.setData(Uri.parse("mailto: "));
+                i.putExtra(Intent.EXTRA_SUBJECT, "Book Appointment Request");
+                i.putExtra(Intent.EXTRA_TEXT, "FullyMinded Appointment Request: \n" +
+                                                    "Type of counseling: " + choice + "\n" +
+                                                    "Name: " + name + "\n" +
+                                                    "Age: " + age + "\n" +
+                                                    "");
+                startActivity(i);
+            }
+        });
+
+
         //getDateTextAppearance
+
+
 
 
         return view;
