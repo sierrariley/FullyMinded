@@ -17,10 +17,27 @@
     <string name="therapyDescript">Therapy’s main focus is on mental health as well as emotional healing. A patient would go to therapy if there was any concern with their mental health such as depression, anxiety, or any form of mental disorders. </string>
     <string name="lifeCoach">Life Coaching</string>
     <string name="lifeDecript">Life coaches do not have mental health training and cannot diagnose, but are there to help you set and achieve goals.</string>
+
     <string name="helpLine">If you are in distress, or are having suicidal thoughts, Please call the Emergency Help Line with the button below</string>
     <string name="bookFullyMinded">BOOK W/FullyMinded ONLINE</string>
     <string name="bookClose">BOOK W/NEAR BY FACILITY</string>
     <string name="bookFullytext">To book with FullyMinded Online services:</string>
     <string name="inperson">To book an in person appointment, click button below to find close Therapy Facilities </string>
     <string name="looking">What are you looking for?:</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
 </resources>

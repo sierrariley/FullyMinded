@@ -3,7 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
+<<<<<<< HEAD
     app:startDestination="@id/nav_sign">
+=======
+    app:startDestination="@id/nav_counselorProfile">
+>>>>>>> development
     <fragment
         android:id="@+id/nav_main"
         android:name="com.example.fullyminded.Fragments.MainFragment"
@@ -34,6 +38,7 @@
         android:label="fragment_check_in"
         tools:layout="@layout/fragment_check_in" />
     <fragment
+<<<<<<< HEAD
         android:id="@+id/nav_terms"
         android:name="com.example.fullyminded.ListView.TermFragment"
         android:label="Terms"
@@ -52,4 +57,14 @@
         android:name="com.example.fullyminded.Fragments.FormFragment"
         android:label="fragment_call"
         tools:layout="@layout/fragment_call" />
+=======
+        android:id="@+id/nav_counselorProfile"
+        android:name="com.example.fullyminded.Recyclerview.CounselorProfileFragment"
+        android:label="Counselors"
+        tools:layout="@layout/fragment_counselor_profile" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.fullyminded.SettingsFragment"
+        android:label="Settings" />
+>>>>>>> development
 </navigation>

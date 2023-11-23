@@ -17,9 +17,15 @@
             android:icon="@drawable/ic_baseline_profile"
             android:title="Profile" />
         <item
+<<<<<<< HEAD
             android:id="@+id/nav_terms"
             android:icon="@drawable/ic_baseline_format_list_bulleted_24"
             android:title="Terms" />
+=======
+            android:id="@+id/nav_counselorProfile"
+            android:icon="@drawable/ic_baseline_person_search_24"
+            android:title="Counselors" />
+>>>>>>> development
         <item
             android:id="@+id/nav_sign"
             android:icon="@drawable/ic_baseline_assignment_24"
