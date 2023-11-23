@@ -112,7 +112,7 @@ public class CheckInFragment extends Fragment {
         TextView focusQ = view.findViewById(R.id.focusQuestion);
         TextView activityQ = view.findViewById(R.id.activityQuestion);
 
-
+        //Font size settings
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
         String selectedValue = preferences.getString("font_size", "16");
         seekBarTextView.setTextSize(Integer.parseInt(selectedValue));

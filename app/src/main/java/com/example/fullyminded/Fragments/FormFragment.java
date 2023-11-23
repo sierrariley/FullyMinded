@@ -1,17 +1,20 @@
 package com.example.fullyminded.Fragments;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.TextView;
 
 import com.example.fullyminded.R;
 import com.google.android.material.snackbar.Snackbar;
@@ -90,6 +93,9 @@ public class FormFragment extends Fragment {
         insuranceNo = view.findViewById(R.id.insuranceNo);
         name = view.findViewById(R.id.nameFill);
         age = view.findViewById(R.id.ageTextField);
+
+
+
 //        Text startDate = view.findViewById(R.id.editTextDate);
         if(mentalHealth.isChecked()){
             choice = "Mental Health";
@@ -117,8 +123,15 @@ public class FormFragment extends Fragment {
             }
         });
 
-
-        //getDateTextAppearance
+        //Font size Setting
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        String selectedValue = preferences.getString("font_size", "16");
+        mentalHealth.setTextSize(Integer.parseInt(selectedValue));
+        lifeCoach.setTextSize(Integer.parseInt(selectedValue));
+        insuranceYes.setTextSize(Integer.parseInt(selectedValue));
+        insuranceNo.setTextSize(Integer.parseInt(selectedValue));
+        name.setTextSize(Integer.parseInt(selectedValue));
+        age.setTextSize(Integer.parseInt(selectedValue));
 
 
 

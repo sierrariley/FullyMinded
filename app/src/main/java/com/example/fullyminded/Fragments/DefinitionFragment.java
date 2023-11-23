@@ -1,12 +1,15 @@
 package com.example.fullyminded.Fragments;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import com.example.fullyminded.R;
 
@@ -61,7 +64,18 @@ public class DefinitionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        View view = inflater.inflate(R.layout.fragment_definition, container, false);
 
-        return inflater.inflate(R.layout.fragment_definition, container, false);
+        TextView therpayDef = view.findViewById(R.id.therapyDescript);
+        TextView lifeCoachDescript = view.findViewById(R.id.lifeCoachDescript);
+
+        //Font size Settings
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        String selectedValue = preferences.getString("font_size", "16");
+        therpayDef.setTextSize(Integer.parseInt(selectedValue));
+        lifeCoachDescript.setTextSize(Integer.parseInt(selectedValue));
+
+
+        return view;
     }
 }
