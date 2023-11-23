@@ -5,7 +5,7 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_main"
+            android:id="@+id/mainFragment"
             android:icon="@drawable/ic_baseline_main"
             android:title="Main" />
         <item
@@ -21,6 +21,10 @@
             android:id="@+id/nav_terms"
             android:icon="@drawable/ic_baseline_format_list_bulleted_24"
             android:title="Terms" />
+        <item
+            android:id="@+id/nav_counselors"
+            android:icon="@drawable/ic_baseline_person_search_24"
+            android:title="Counselors" />
 
 
         <item

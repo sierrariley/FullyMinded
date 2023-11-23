@@ -96,7 +96,7 @@ public class SignUpFragment extends Fragment {
         formButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_nav_sign_to_formFragment);
+                Navigation.findNavController(view).navigate(R.id.action_signUpFragment_to_formFragment2);
             }
         });
         return view;

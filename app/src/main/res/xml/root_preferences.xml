@@ -5,9 +5,9 @@
 
         <SwitchPreferenceCompat
             android:id="@+id/recyclerLayoutChange"
+            app:defaultValue="false"
             app:key="grid_view"
-            app:title="Grid Layout"
-            app:defaultValue="false"/>
+            app:title="Grid Layout" />
 
 
     </PreferenceCategory>

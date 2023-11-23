@@ -10,22 +10,22 @@
         android:label="fragment_call"
         tools:layout="@layout/fragment_call" />
     <fragment
-        android:id="@+id/checkInFragment"
+        android:id="@+id/nav_check"
         android:name="com.example.fullyminded.Fragments.CheckInFragment"
         android:label="fragment_check_in"
         tools:layout="@layout/fragment_check_in" />
     <fragment
-        android:id="@+id/counselorProfileFragment"
+        android:id="@+id/nav_counselors"
         android:name="com.example.fullyminded.Recyclerview.CounselorProfileFragment"
         android:label="fragment_counselor_profile"
         tools:layout="@layout/fragment_counselor_profile" />
     <fragment
-        android:id="@+id/termFragment"
+        android:id="@+id/nav_terms"
         android:name="com.example.fullyminded.ListView.TermFragment"
         android:label="fragment_counselors"
         tools:layout="@layout/fragment_counselors" />
     <fragment
-        android:id="@+id/definitionFragment"
+        android:id="@+id/nav_difference"
         android:name="com.example.fullyminded.Fragments.DefinitionFragment"
         android:label="fragment_definition"
         tools:layout="@layout/fragment_definition" />
@@ -40,7 +40,7 @@
         android:label="fragment_second_list_page"
         tools:layout="@layout/fragment_second_list_page" />
     <fragment
-        android:id="@+id/signUpFragment"
+        android:id="@+id/nav_sign"
         android:name="com.example.fullyminded.Fragments.SignUpFragment"
         android:label="fragment_sign_up"
         tools:layout="@layout/fragment_sign_up" >
@@ -49,10 +49,13 @@
             app:destination="@id/formFragment2" />
     </fragment>
     <fragment
-        android:id="@+id/profileFragment"
+        android:id="@+id/nav_profile"
         android:name="com.example.fullyminded.Fragments.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.example.fullyminded.SettingsFragment"
+        android:label="SettingsFragment" />
 </navigation>
 
-   
