@@ -3,45 +3,62 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/nav_main">
+    app:startDestination="@id/mainFragment">
+
     <fragment
-        android:id="@+id/nav_main"
-        android:name="com.example.fullyminded.Fragments.MainFragment"
-        android:label="Fully Minded"
-        tools:layout="@layout/fragment_main" />
-    <fragment
-        android:id="@+id/nav_difference"
-        android:name="com.example.fullyminded.Fragments.DefinitionFragment"
-        android:label="Descriptions"
-        tools:layout="@layout/fragment_definition" />
-    <fragment
-        android:id="@+id/nav_sign"
-        android:name="com.example.fullyminded.Fragments.SignUpFragment"
-        android:label="Sign Up"
-        tools:layout="@layout/fragment_sign_up" />
+        android:id="@+id/formFragment2"
+        android:name="com.example.fullyminded.Fragments.FormFragment"
+        android:label="fragment_call"
+        tools:layout="@layout/fragment_call" />
     <fragment
         android:id="@+id/nav_check"
         android:name="com.example.fullyminded.Fragments.CheckInFragment"
         android:label="Daily Check In"
         tools:layout="@layout/fragment_check_in" />
     <fragment
-        android:id="@+id/nav_counselorProfile"
+        android:id="@+id/nav_counselors"
         android:name="com.example.fullyminded.Recyclerview.CounselorProfileFragment"
-        android:label="Counselors"
+        android:label="fragment_counselor_profile"
         tools:layout="@layout/fragment_counselor_profile" />
     <fragment
-
         android:id="@+id/nav_tips"
         android:name="com.example.fullyminded.Viewpager.VPHost"
         android:label="Tips for Sessions"
         tools:layout="@layout/fragment_v_p_host" />
     <fragment
+        android:id="@+id/nav_terms"
+        android:name="com.example.fullyminded.ListView.TermFragment"
+        android:label="fragment_counselors"
+        tools:layout="@layout/fragment_counselors" />
+    <fragment
+        android:id="@+id/nav_difference"
+        android:name="com.example.fullyminded.Fragments.DefinitionFragment"
+        android:label="fragment_definition"
+        tools:layout="@layout/fragment_definition" />
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.example.fullyminded.Fragments.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" />
+    <fragment
+        android:id="@+id/secondListPageFragment"
+        android:name="com.example.fullyminded.ListView.SecondListPageFragment"
+        android:label="fragment_second_list_page"
+        tools:layout="@layout/fragment_second_list_page" />
+    <fragment
+        android:id="@+id/nav_sign"
+        android:name="com.example.fullyminded.Fragments.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_formFragment2"
+            app:destination="@id/formFragment2" />
+    </fragment>
+    <fragment
         android:id="@+id/nav_settings"
         android:name="com.example.fullyminded.SettingsFragment"
-        android:label="SettingsFragment" />
-
-    <!--        android:id="@+id/nav_settings"-->
-<!--        android:name="com.example.fullyminded.SettingsFragment"-->
-<!--        android:label="Settings" />-->
-
+        android:label="Settings" />
 </navigation>
+
+
+

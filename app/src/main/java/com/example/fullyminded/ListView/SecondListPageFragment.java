@@ -1,10 +1,8 @@
-package com.example.fullyminded.Fragments;
+package com.example.fullyminded.ListView;
 
-import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,10 +13,10 @@ import com.example.fullyminded.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link DefinitionFragment#newInstance} factory method to
+ * Use the {@link SecondListPageFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DefinitionFragment extends Fragment {
+public class SecondListPageFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -29,7 +27,7 @@ public class DefinitionFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public DefinitionFragment() {
+    public SecondListPageFragment() {
         // Required empty public constructor
     }
 
@@ -39,11 +37,11 @@ public class DefinitionFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment DefinitionFragment.
+     * @return A new instance of fragment SecondListPageFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static DefinitionFragment newInstance(String param1, String param2) {
-        DefinitionFragment fragment = new DefinitionFragment();
+    public static SecondListPageFragment newInstance(String param1, String param2) {
+        SecondListPageFragment fragment = new SecondListPageFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -64,16 +62,17 @@ public class DefinitionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_definition, container, false);
 
-        TextView therpayDef = view.findViewById(R.id.therapyDescript);
-        TextView lifeCoachDescript = view.findViewById(R.id.lifeCoachDescript);
+        View view = inflater.inflate(R.layout.fragment_second_list_page, container, false);
 
-        //Font size Settings
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
-        String selectedValue = preferences.getString("font_size", "16");
-        therpayDef.setTextSize(Integer.parseInt(selectedValue));
-        lifeCoachDescript.setTextSize(Integer.parseInt(selectedValue));
+        Bundle extras = getArguments();
+        if (extras != null) {
+
+        }
+
+
+
+
 
 
         return view;

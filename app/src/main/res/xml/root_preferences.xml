@@ -5,11 +5,21 @@
 
         <SwitchPreferenceCompat
             android:id="@+id/recyclerLayoutChange"
+            app:defaultValue="false"
             app:key="grid_view"
-            app:title="Grid Layout"
-            app:defaultValue="false"/>
+            app:title="Grid Layout" />
 
 
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Font Sizing">
+        <ListPreference
+            android:defaultValue="16"
+            android:entries="@array/font_size_menu"
+            android:entryValues="@array/font_size_value"
+            app:key="font_size"
+            app:useSimpleSummaryProvider="true"
+            android:title="Font Size"
+            app:summary="Please select a preferred font size"/>
     </PreferenceCategory>
 
 </PreferenceScreen>

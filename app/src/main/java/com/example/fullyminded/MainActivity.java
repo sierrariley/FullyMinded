@@ -1,7 +1,6 @@
 package com.example.fullyminded;
 
 import android.os.Bundle;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
@@ -45,8 +44,7 @@ public class MainActivity extends AppCompatActivity {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-
-                R.id.nav_main, R.id.nav_difference, R.id.nav_sign, R.id.nav_check, R.id.nav_counselorProfile, R.id.nav_tips)
+                R.id.mainFragment, R.id.nav_difference, R.id.nav_sign, R.id.nav_check, R.id.nav_terms, R.id.nav_counselors)
                 .setOpenableLayout(drawer)
                 .build();
         navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
@@ -69,6 +67,8 @@ public class MainActivity extends AppCompatActivity {
                 || super.onSupportNavigateUp();
     }
 
+
+
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
@@ -77,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
         return super.onOptionsItemSelected(item);
+
 
     }
 }
