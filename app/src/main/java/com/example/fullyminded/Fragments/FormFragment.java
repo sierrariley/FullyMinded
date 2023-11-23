@@ -67,6 +67,8 @@ public class FormFragment extends Fragment {
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
     }
+
+    //Variables
     RadioButton mentalHealth;
     RadioButton lifeCoach;
     RadioButton insuranceYes;
@@ -88,7 +90,7 @@ public class FormFragment extends Fragment {
         insuranceNo = view.findViewById(R.id.insuranceNo);
         name = view.findViewById(R.id.nameFill);
         age = view.findViewById(R.id.ageTextField);
-
+//        Text startDate = view.findViewById(R.id.editTextDate);
         if(mentalHealth.isChecked()){
             choice = "Mental Health";
         }else{
@@ -97,6 +99,10 @@ public class FormFragment extends Fragment {
 
         Button sendButton = view.findViewById(R.id.sendRequestButton);
 
+        /**
+         * This onClickListener will allow user to email FullyMinded with their request. They will be emailed back.
+         * @param Intent i
+         */
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -106,8 +112,7 @@ public class FormFragment extends Fragment {
                 i.putExtra(Intent.EXTRA_TEXT, "FullyMinded Appointment Request: \n" +
                                                     "Type of counseling: " + choice + "\n" +
                                                     "Name: " + name + "\n" +
-                                                    "Age: " + age + "\n" +
-                                                    "");
+                                                    "Age: " + age );
                 startActivity(i);
             }
         });

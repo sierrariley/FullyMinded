@@ -128,19 +128,6 @@
             android:text="No" />
     </RadioGroup>
 
-    <TextView
-        android:id="@+id/textView11"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="When would you like to start?"
-        android:textSize="16sp"
-        android:textStyle="bold" />
-
-    <CalendarView
-        android:id="@+id/dateStart"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
-
     <Button
         android:id="@+id/sendRequestButton"
         android:layout_width="match_parent"
