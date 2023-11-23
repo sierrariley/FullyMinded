@@ -15,11 +15,6 @@
         android:label="Descriptions"
         tools:layout="@layout/fragment_definition" />
     <fragment
-        android:id="@+id/nav_profile"
-        android:name="com.example.fullyminded.Fragments.ProfileFragment"
-        android:label="Profile"
-        tools:layout="@layout/fragment_profile" />
-    <fragment
         android:id="@+id/nav_sign"
         android:name="com.example.fullyminded.Fragments.SignUpFragment"
         android:label="Sign Up"
