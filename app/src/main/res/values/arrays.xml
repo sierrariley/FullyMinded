@@ -1,3 +1,16 @@
 <resources>
+    <string-array name="font_size_menu">
+        <item>40</item>
+        <item>30</item>
+        <item>26</item>
+        <item>16</item>
+    </string-array>
+
+    <string-array name="font_size_value">
+        <item>40</item>
+        <item>30</item>
+        <item>26</item>
+        <item>16</item>
+    </string-array>
 
 </resources>

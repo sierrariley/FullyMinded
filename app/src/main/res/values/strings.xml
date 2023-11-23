@@ -6,7 +6,6 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
@@ -39,5 +38,8 @@
     <string name="attachment_summary_on">Automatically download attachments for incoming emails
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+    <string name="whoAreWe">We at FullyMinded are a gateway company to booking that first Therapy or Life Coaching session. We pride ourselves in being advocates to seeking help. </string>
+    <string name="purpose">Why this app? We aim to steer you in the right direction. We have some online couselors readlily available to meet with you, or you can book appointments at near buy facilities or even by pressing the button below, you can search for a therapist on a secure website</string>
 
 </resources>

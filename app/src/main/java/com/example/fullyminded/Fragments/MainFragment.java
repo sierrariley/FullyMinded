@@ -1,14 +1,22 @@
 package com.example.fullyminded.Fragments;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.fullyminded.R;
+
+import org.w3c.dom.Text;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -61,6 +69,27 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        View view = inflater.inflate(R.layout.fragment_main, container, false);
+        Uri webPage = Uri.parse("https://www.psychologytoday.com/ca?tr=Hdr_Brand");
+
+        Button webButton = view.findViewById(R.id.officialWebButton);
+        webButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Intent.ACTION_VIEW, webPage);
+                startActivity(i);
+
+            }
+        });
+
+        TextView aboutText = view.findViewById(R.id.whoWeAreText);
+        TextView purpose = view.findViewById(R.id.purposeText);
+
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        String selectedValue = preferences.getString("font_size", "16");
+      aboutText.setTextSize(Integer.parseInt(selectedValue));
+      purpose.setTextSize(Integer.parseInt(selectedValue));
+
+        return view;
     }
 }
