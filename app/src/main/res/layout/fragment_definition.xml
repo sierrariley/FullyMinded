@@ -35,4 +35,10 @@
         android:layout_height="wrap_content"
         android:text="@string/lifeDecript"
         android:textSize="16sp" />
+
+    <Button
+        android:id="@+id/affirmationButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:text="Daily Affirmations" />
 </LinearLayout>
