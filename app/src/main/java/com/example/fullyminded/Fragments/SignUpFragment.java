@@ -1,12 +1,19 @@
 package com.example.fullyminded.Fragments;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
+import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.fullyminded.R;
 
@@ -61,6 +68,51 @@ public class SignUpFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_sign_up, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_sign_up, container, false);
+
+        TextView signUpFully = view.findViewById(R.id.signUpFully);
+        TextView onlineSignUp = view.findViewById(R.id.signUpOnline);
+        TextView emerg = view.findViewById(R.id.emergText);
+
+        //Font sizing Setting
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        String selectedValue = preferences.getString("font_size", "14");
+        signUpFully.setTextSize(Integer.parseInt(selectedValue));
+        onlineSignUp.setTextSize(Integer.parseInt(selectedValue));
+        emerg.setTextSize(Integer.parseInt(selectedValue));
+
+        Button call = view.findViewById(R.id.emergencyButton);
+        call.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Intent.ACTION_DIAL);
+                i.setData(Uri.parse("tel:1-833-456-4566"));
+//                if(i.resolveActivity(getActivity().getPackageManager()) != null){
+                    startActivity(i);
+//                }
+
+            }
+        });
+
+        Button webButton = view.findViewById(R.id.webButton);
+        webButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Uri places = Uri.parse("geo:0,0?q= therapy, life coach, counseling");
+                Intent i = new Intent(Intent.ACTION_VIEW, places);
+                startActivity(i);
+            }
+        });
+
+
+        Button formButton = view.findViewById(R.id.formButton);
+        formButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.action_signUpFragment_to_formFragment2);
+            }
+        });
+        return view;
     }
 }

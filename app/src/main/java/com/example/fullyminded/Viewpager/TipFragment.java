@@ -1,43 +1,36 @@
-package com.example.fullyminded.Fragments;
-
-
-import android.content.Intent;
-import android.net.Uri;
-import android.content.SharedPreferences;
+package com.example.fullyminded.Viewpager;
 
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
-import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
-import android.widget.Button;
-
+import android.widget.ImageView;
 import android.widget.TextView;
-
 
 import com.example.fullyminded.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link DefinitionFragment#newInstance} factory method to
+ * Use the {@link TipFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class DefinitionFragment extends Fragment {
+public class TipFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private static final String ARG_PARAM3 = "param3";
 
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    private int mParam3;
 
-    public DefinitionFragment() {
+    public TipFragment() {
         // Required empty public constructor
     }
 
@@ -47,14 +40,15 @@ public class DefinitionFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment DefinitionFragment.
+     * @return A new instance of fragment TipFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static DefinitionFragment newInstance(String param1, String param2) {
-        DefinitionFragment fragment = new DefinitionFragment();
+    public static TipFragment newInstance(String param1, String param2, int param3) {
+        TipFragment fragment = new TipFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
+        args.putInt(ARG_PARAM3, param3);
         fragment.setArguments(args);
         return fragment;
     }
@@ -65,6 +59,7 @@ public class DefinitionFragment extends Fragment {
         if (getArguments() != null) {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
+            mParam3 = getArguments().getInt(ARG_PARAM3);
         }
     }
 
@@ -73,29 +68,19 @@ public class DefinitionFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
+        View view = inflater.inflate(R.layout.fragment_tip, container, false);
+        TextView heading = view.findViewById(R.id.tipHeading);
+        TextView tip = view.findViewById(R.id.tipText);
+        ImageView tipImage = view.findViewById(R.id.tipImage);
 
-        View view = inflater.inflate(R.layout.fragment_definition, container, false);
-
-        Button dailyAffirm = view.findViewById(R.id.affirmationButton);
-        Uri instaLink = Uri.parse("https://www.instagram.com/iam.affirmations/");
-        dailyAffirm.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Intent.ACTION_VIEW, instaLink);
-                startActivity(i);
-            }
-        });
-
-
-        TextView therpayDef = view.findViewById(R.id.therapyDescript);
-        TextView lifeCoachDescript = view.findViewById(R.id.lifeCoachDescript);
-
-        //Font size Settings
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
-        String selectedValue = preferences.getString("font_size", "16");
-        therpayDef.setTextSize(Integer.parseInt(selectedValue));
-        lifeCoachDescript.setTextSize(Integer.parseInt(selectedValue));
-
+        /**
+         * Fill the textViews and Image view with the texts and images set for mparams
+         */
+        if(mParam1 != null && mParam2 != null && mParam3 != 0){
+            heading.setText(mParam1);
+            tip.setText(mParam2);
+            tipImage.setImageResource(mParam3);
+        }
 
 
         return view;
