@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/nav_main">
+    app:startDestination="@id/nav_terms">
     <fragment
         android:id="@+id/nav_main"
         android:name="com.example.fullyminded.Fragments.MainFragment"
@@ -14,11 +14,6 @@
         android:name="com.example.fullyminded.Fragments.DefinitionFragment"
         android:label="Descriptions"
         tools:layout="@layout/fragment_definition" />
-    <fragment
-        android:id="@+id/nav_profile"
-        android:name="com.example.fullyminded.Fragments.ProfileFragment"
-        android:label="Profile"
-        tools:layout="@layout/fragment_profile" />
     <fragment
         android:id="@+id/nav_sign"
         android:name="com.example.fullyminded.Fragments.SignUpFragment"
@@ -32,15 +27,6 @@
     <fragment
         android:id="@+id/nav_terms"
         android:name="com.example.fullyminded.ListView.TermFragment"
-        android:label="Terms"
-        tools:layout="@layout/fragment_counselors">
-        <action
-            android:id="@+id/action_nav_counselor_to_secondListPageFragment"
-            app:destination="@id/nav_second" />
-    </fragment>
-    <fragment
-        android:id="@+id/nav_second"
-        android:name="com.example.fullyminded.ListView.SecondListPageFragment"
-        android:label="Counselor"
-        tools:layout="@layout/fragment_second_list_page" />
+        android:label="Seeking Help"
+        tools:layout="@layout/fragment_counselors" />
 </navigation>

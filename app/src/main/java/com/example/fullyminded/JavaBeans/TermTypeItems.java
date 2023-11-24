@@ -6,9 +6,9 @@ public class TermTypeItems {
 //    private String description;
 
 
-    public TermTypeItems(String name, String description ) {
+    public TermTypeItems(String name) {
         this.name = name;
-        this.description = description;
+//        this.description = description;
 
     }
 
@@ -20,19 +20,19 @@ public class TermTypeItems {
         this.name = name;
     }
 
-    public static String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
+//    public static String getDescription() {
+//        return description;
+//    }
+//
+//    public void setDescription(String description) {
+//        this.description = description;
+//    }
 
 
 
     @Override
     public String toString() {
-        return name + "\n" + description ;
+        return name  ;
     }
 
 

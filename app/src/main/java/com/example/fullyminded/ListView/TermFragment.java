@@ -75,11 +75,20 @@ public class TermFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_counselors, container, false);
         ListView listView = view.findViewById(R.id.termList);
         ArrayList<TermTypeItems> termTypeItems = new ArrayList<>();
-        termTypeItems.add(new TermTypeItems("Depression",  "Marcus Walls has been practicing for 5 years and specializes in mental health issues such as depression and anxiety."));
-        termTypeItems.add(new TermTypeItems("Anxiety",  "Amanda has been practicing mental health therapy for 8 years. She specialized in childhood trauma. Targeting the pas traumas of our past that still affect us today."));
-        termTypeItems.add(new TermTypeItems("Bipolar",  "Melissa Wilson has a heart for family counseling. She specializes in Marriage issues, as well as parental issue. "));
-        termTypeItems.add(new TermTypeItems("Obsessive Compulsive Disorder",  "David Harris is a certified Life Coach focusing on helping others organize their live. You have too muc on your plate? David has the tools and knowledge to help sort out your life"));
-        termTypeItems.add(new TermTypeItems("Procrastination",  "Amber understands the pressures life can bring. She specializes in finding setting realistic goals and helping you journey to achieving those goals"));
+        termTypeItems.add(new TermTypeItems("Depression"));
+        termTypeItems.add(new TermTypeItems("Anxiety"));
+        termTypeItems.add(new TermTypeItems("Bipolar"));
+        termTypeItems.add(new TermTypeItems("Obsessive Compulsive Disorder"));
+        termTypeItems.add(new TermTypeItems("Procrastination"));
+        termTypeItems.add(new TermTypeItems("Grief/Loss"));
+        termTypeItems.add(new TermTypeItems("Phobias"));
+        termTypeItems.add(new TermTypeItems("Relationship Issues"));
+        termTypeItems.add(new TermTypeItems("Stress"));
+        termTypeItems.add(new TermTypeItems("Breaking Habits"));
+        termTypeItems.add(new TermTypeItems("Goal Setting"));
+        termTypeItems.add(new TermTypeItems("Trauma"));
+
+
 
 
 
@@ -93,13 +102,7 @@ public class TermFragment extends Fragment {
 
         CustomListViewAdapter adapter = new CustomListViewAdapter(getContext(), termTypeItems);
 
-        TextView description = view.findViewById(R.id.descriptionText);
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-//                description.setText((TermTypeItems)listView.getItemAtPosition(i));
-            }
-        });
+//
         listView.setAdapter(adapter);
 
 
