@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/nav_counselors"
         android:name="com.example.fullyminded.Recyclerview.CounselorProfileFragment"
-        android:label="fragment_counselor_profile"
+        android:label="Couselors"
         tools:layout="@layout/fragment_counselor_profile" />
     <fragment
         android:id="@+id/nav_tips"
@@ -34,12 +34,12 @@
     <fragment
         android:id="@+id/nav_difference"
         android:name="com.example.fullyminded.Fragments.DefinitionFragment"
-        android:label="fragment_definition"
+        android:label="Definition"
         tools:layout="@layout/fragment_definition" />
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.fullyminded.Fragments.MainFragment"
-        android:label="fragment_main"
+        android:label="Home Page"
         tools:layout="@layout/fragment_main" />
     <fragment
         android:id="@+id/secondListPageFragment"
@@ -49,8 +49,8 @@
     <fragment
         android:id="@+id/nav_sign"
         android:name="com.example.fullyminded.Fragments.SignUpFragment"
-        android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" >
+        android:label="Book Appt. "
+        tools:layout="@layout/fragment_sign_up">
         <action
             android:id="@+id/action_signUpFragment_to_formFragment2"
             app:destination="@id/formFragment2" />
