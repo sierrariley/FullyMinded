@@ -166,6 +166,7 @@ public class CheckInFragment extends Fragment {
                         "\n 3. I recited my affirmations today?: " + affirm +
                         "\n 4. Have I had a hard time focusing on tasks?: " + focus +
                         "\n 5. I have engaged in physical activity today: " + activity);
+                
                 startActivity(i);
             }
         });
