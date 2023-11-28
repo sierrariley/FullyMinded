@@ -24,7 +24,7 @@ public class CounselorRecycleAdapter extends RecyclerView.Adapter<CounselorRecyc
     @NonNull
     @Override
     public CustomViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_recycler_view, null);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.fragment_recycler_view, parent, false);
 
         return new CustomViewHolder(view);
     }

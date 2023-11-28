@@ -39,7 +39,7 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.fullyminded.Fragments.MainFragment"
-        android:label="fragment_main"
+        android:label="Home"
         tools:layout="@layout/fragment_main" />
     <fragment
         android:id="@+id/secondListPageFragment"
