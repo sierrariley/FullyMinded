@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/formFragment2"
         android:name="com.example.fullyminded.Fragments.FormFragment"
-        android:label="fragment_call"
+        android:label="Form"
         tools:layout="@layout/fragment_call" />
 
     <fragment
@@ -18,7 +18,7 @@
     <fragment
         android:id="@+id/nav_counselors"
         android:name="com.example.fullyminded.Recyclerview.CounselorProfileFragment"
-        android:label="fragment_counselor_profile"
+        android:label="Counselors"
         tools:layout="@layout/fragment_counselor_profile" />
     <fragment
         android:id="@+id/nav_tips"
@@ -34,7 +34,7 @@
     <fragment
         android:id="@+id/nav_difference"
         android:name="com.example.fullyminded.Fragments.DefinitionFragment"
-        android:label="fragment_definition"
+        android:label="Definitions"
         tools:layout="@layout/fragment_definition" />
     <fragment
         android:id="@+id/mainFragment"
@@ -49,8 +49,8 @@
     <fragment
         android:id="@+id/nav_sign"
         android:name="com.example.fullyminded.Fragments.SignUpFragment"
-        android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" >
+        android:label="Sign up"
+        tools:layout="@layout/fragment_sign_up">
         <action
             android:id="@+id/action_signUpFragment_to_formFragment2"
             app:destination="@id/formFragment2" />
