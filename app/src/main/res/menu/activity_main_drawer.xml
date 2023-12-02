@@ -13,10 +13,6 @@
             android:icon="@drawable/ic_baseline_info_24"
             android:title="Descriptions" />
         <item
-            android:id="@+id/Profile"
-            android:icon="@drawable/ic_baseline_profile"
-            android:title="Profile" />
-        <item
             android:id="@+id/nav_terms"
             android:icon="@drawable/ic_baseline_format_list_bulleted_24"
             android:title="Terms" />
@@ -33,5 +29,9 @@
             android:id="@+id/nav_check"
             android:icon="@drawable/ic_baseline_check_box_24"
             android:title="Daily Check-In" />
+        <item
+            android:id="@+id/nav_tips"
+            android:icon="@drawable/ic_baseline_playlist_add_check_24"
+            android:title="Tips" />
     </group>
 </menu>

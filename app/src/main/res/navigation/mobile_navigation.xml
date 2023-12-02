@@ -4,36 +4,42 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/mainFragment">
-
     <fragment
         android:id="@+id/formFragment2"
         android:name="com.example.fullyminded.Fragments.FormFragment"
-        android:label="fragment_call"
+        android:label="Form"
         tools:layout="@layout/fragment_call" />
+
     <fragment
         android:id="@+id/nav_check"
         android:name="com.example.fullyminded.Fragments.CheckInFragment"
-        android:label="fragment_check_in"
+        android:label="Daily Check In"
         tools:layout="@layout/fragment_check_in" />
     <fragment
         android:id="@+id/nav_counselors"
         android:name="com.example.fullyminded.Recyclerview.CounselorProfileFragment"
-        android:label="fragment_counselor_profile"
+        android:label="Counselors"
         tools:layout="@layout/fragment_counselor_profile" />
+    <fragment
+        android:id="@+id/nav_tips"
+        android:name="com.example.fullyminded.Viewpager.VPHost"
+        android:label="Tips for Sessions"
+        tools:layout="@layout/fragment_v_p_host" />
     <fragment
         android:id="@+id/nav_terms"
         android:name="com.example.fullyminded.ListView.TermFragment"
-        android:label="fragment_counselors"
+        android:label="Seeking Help"
         tools:layout="@layout/fragment_counselors" />
+
     <fragment
         android:id="@+id/nav_difference"
         android:name="com.example.fullyminded.Fragments.DefinitionFragment"
-        android:label="fragment_definition"
+        android:label="Definitions"
         tools:layout="@layout/fragment_definition" />
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.fullyminded.Fragments.MainFragment"
-        android:label="fragment_main"
+        android:label="Home"
         tools:layout="@layout/fragment_main" />
     <fragment
         android:id="@+id/secondListPageFragment"
@@ -43,24 +49,17 @@
     <fragment
         android:id="@+id/nav_sign"
         android:name="com.example.fullyminded.Fragments.SignUpFragment"
-        android:label="fragment_sign_up"
-        tools:layout="@layout/fragment_sign_up" >
+        android:label="Sign up"
+        tools:layout="@layout/fragment_sign_up">
         <action
             android:id="@+id/action_signUpFragment_to_formFragment2"
             app:destination="@id/formFragment2" />
     </fragment>
     <fragment
-        android:id="@+id/nav_profile"
-        android:name="com.example.fullyminded.Fragments.ProfileFragment"
-        android:label="fragment_profile"
-        tools:layout="@layout/fragment_profile" />
-    <fragment
         android:id="@+id/nav_settings"
         android:name="com.example.fullyminded.SettingsFragment"
         android:label="Settings" />
 </navigation>
-
-
 
 
 

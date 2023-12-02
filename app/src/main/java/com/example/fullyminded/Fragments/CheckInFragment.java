@@ -1,10 +1,12 @@
 package com.example.fullyminded.Fragments;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -103,6 +105,23 @@ public class CheckInFragment extends Fragment {
         activityNo = view.findViewById(R.id.activityNo);
 
         sleepGroup = view.findViewById(R.id.slepRadioButtons);
+
+        TextView sleepText = view.findViewById(R.id.sleepQuestion);
+        TextView feelText = view.findViewById(R.id.feelQuestion);
+        TextView affrimQ = view.findViewById(R.id.affirmQuestion);
+        TextView focusQ = view.findViewById(R.id.focusQuestion);
+        TextView activityQ = view.findViewById(R.id.activityQuestion);
+
+        //Font size settings
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        String selectedValue = preferences.getString("font_size", "16");
+        seekBarTextView.setTextSize(Integer.parseInt(selectedValue));
+        sleepText.setTextSize(Integer.parseInt(selectedValue));
+        feelText.setTextSize(Integer.parseInt(selectedValue));
+        affrimQ.setTextSize(Integer.parseInt(selectedValue));
+        focusQ.setTextSize(Integer.parseInt(selectedValue));
+        activityQ.setTextSize(Integer.parseInt(selectedValue));
+
 
         //This gives the response yes or no when sending the results in the email
         if(sleepYes.isChecked()){

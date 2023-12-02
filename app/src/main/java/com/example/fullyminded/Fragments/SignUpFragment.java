@@ -1,16 +1,19 @@
 package com.example.fullyminded.Fragments;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
+import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import com.example.fullyminded.R;
 
@@ -67,6 +70,17 @@ public class SignUpFragment extends Fragment {
         // Inflate the layout for this fragment
 
         View view = inflater.inflate(R.layout.fragment_sign_up, container, false);
+
+        TextView signUpFully = view.findViewById(R.id.signUpFully);
+        TextView onlineSignUp = view.findViewById(R.id.signUpOnline);
+        TextView emerg = view.findViewById(R.id.emergText);
+
+        //Font sizing Setting
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
+        String selectedValue = preferences.getString("font_size", "14");
+        signUpFully.setTextSize(Integer.parseInt(selectedValue));
+        onlineSignUp.setTextSize(Integer.parseInt(selectedValue));
+        emerg.setTextSize(Integer.parseInt(selectedValue));
 
         Button call = view.findViewById(R.id.emergencyButton);
         call.setOnClickListener(new View.OnClickListener() {
