@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -81,6 +83,10 @@ public class TipFragment extends Fragment {
             tip.setText(mParam2);
             tipImage.setImageResource(mParam3);
         }
+
+        //Fade Animations for Images
+        Animation fade = AnimationUtils.loadAnimation(getContext(), R.anim.anim_fade);
+        tipImage.startAnimation(fade);
 
 
         return view;
