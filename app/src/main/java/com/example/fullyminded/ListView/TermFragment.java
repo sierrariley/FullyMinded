@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -89,21 +91,11 @@ public class TermFragment extends Fragment {
         termTypeItems.add(new TermTypeItems("Trauma"));
 
 
-
-
-
-
-
-//        Method 1:
-//        ArrayAdapter adapter = new ArrayAdapter(getContext(), android.R.layout.simple_list_item_1, termTypeItems);
-//        listView.setAdapter(adapter);
-
-        //Method 2:
-
         CustomListViewAdapter adapter = new CustomListViewAdapter(getContext(), termTypeItems);
-
-//
         listView.setAdapter(adapter);
+
+        Animation animation = AnimationUtils.loadAnimation(getContext(), R.anim.anim_in);
+        listView.startAnimation(animation);
 
 
 
