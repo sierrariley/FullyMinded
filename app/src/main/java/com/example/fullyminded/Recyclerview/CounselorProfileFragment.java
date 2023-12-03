@@ -92,15 +92,14 @@ public class CounselorProfileFragment extends Fragment {
 //        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(new CounselorRecycleAdapter(counselor));
 
-
+        //Grid Layout Setting
       SharedPreferences preferences =  PreferenceManager.getDefaultSharedPreferences(getContext());
-
       Boolean switchPreference = preferences.getBoolean("grid_view", false);
-if(switchPreference){
-    recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
-}else{
-    recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-}
+        if(switchPreference){
+            recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
+        }else{
+            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        }
 
 
 
