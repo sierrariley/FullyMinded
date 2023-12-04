@@ -11,10 +11,15 @@ import androidx.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fullyminded.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.w3c.dom.Text;
 
@@ -71,6 +76,7 @@ public class MainFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         Uri webPage = Uri.parse("https://www.psychologytoday.com/ca?tr=Hdr_Brand");
+        ImageView imageView = view.findViewById(R.id.helpImage);
 
         Button webButton = view.findViewById(R.id.officialWebButton);
         webButton.setOnClickListener(new View.OnClickListener() {
@@ -85,10 +91,30 @@ public class MainFragment extends Fragment {
         TextView aboutText = view.findViewById(R.id.whoWeAreText);
         TextView purpose = view.findViewById(R.id.purposeText);
 
+        /**
+         * @preferences - hold the setting for font sizing
+         * allows user to change the font size of text in app
+         * @preferences1 - hold the setting for snackbar
+         * snack bar gives a reminder to do the daily check in. If switchpreference is true, snackbar will show
+         */
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
         String selectedValue = preferences.getString("font_size", "16");
-      aboutText.setTextSize(Integer.parseInt(selectedValue));
-      purpose.setTextSize(Integer.parseInt(selectedValue));
+         aboutText.setTextSize(Integer.parseInt(selectedValue));
+          purpose.setTextSize(Integer.parseInt(selectedValue));
+
+        SharedPreferences preferences1 = PreferenceManager.getDefaultSharedPreferences(getContext());
+        Boolean notification = preferences1.getBoolean("switch_notification", true);
+        if(notification) {
+            Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content), "Don't forget to do your Daily Check In", Snackbar.LENGTH_LONG);
+            snackbar.show();
+        }
+
+
+        //Fade animation for image
+        Animation fade = AnimationUtils.loadAnimation(getContext(), R.anim.anim_fade);
+        imageView.startAnimation(fade);
+
+
 
         return view;
     }

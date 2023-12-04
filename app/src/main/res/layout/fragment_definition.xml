@@ -3,14 +3,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/offWhite"
     android:orientation="vertical"
     tools:context=".Fragments.DefinitionFragment">
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="cursive"
+        android:text="What's The Difference?"
+        android:textAlignment="center"
+        android:textColor="@color/blueBlack"
+        android:textSize="34sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/therapy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="cursive"
+        android:padding="20dp"
         android:text="@string/therapy"
         android:textSize="34sp" />
 
@@ -18,6 +31,7 @@
         android:id="@+id/therapyDescript"
         android:layout_width="match_parent"
         android:layout_height="100dp"
+        android:padding="20dp"
         android:text="@string/therapyDescript"
         android:textSize="16sp" />
 
@@ -25,7 +39,8 @@
         android:id="@+id/lifeCoach"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="cursive"
+        android:padding="20dp"
         android:text="@string/lifeCoach"
         android:textSize="34sp" />
 
@@ -33,6 +48,7 @@
         android:id="@+id/lifeCoachDescript"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:padding="20dp"
         android:text="@string/lifeDecript"
         android:textSize="16sp" />
 
@@ -40,5 +56,6 @@
         android:id="@+id/affirmationButton"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:text="Daily Affirmations" />
+        android:text="Daily Affirmations"
+        android:textAlignment="center" />
 </LinearLayout>

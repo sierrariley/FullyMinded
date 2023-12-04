@@ -1,5 +1,10 @@
 package com.example.fullyminded.JavaBeans;
 
+/**
+ * Counselor Type Class
+ * This is used in the recycler view
+ */
+
 public class CounselorTypeItems {
     private String specialty;
 

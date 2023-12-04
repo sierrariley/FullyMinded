@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/offWhite"
     tools:context=".ListView.TermFragment">
 
     <TextView
@@ -13,7 +14,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="2"
         android:fontFamily="@font/adamina"
-        android:text="Common Resons"
+        android:text="Common Reasons"
         android:textAlignment="center"
         android:textSize="20sp"
         android:textStyle="bold" />

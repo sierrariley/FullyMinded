@@ -7,7 +7,7 @@
     <fragment
         android:id="@+id/formFragment2"
         android:name="com.example.fullyminded.Fragments.FormFragment"
-        android:label="fragment_call"
+        android:label="Form"
         tools:layout="@layout/fragment_call" />
 
     <fragment
@@ -18,7 +18,8 @@
     <fragment
         android:id="@+id/nav_counselors"
         android:name="com.example.fullyminded.Recyclerview.CounselorProfileFragment"
-        android:label="Couselors"
+        android:label="Counselors"
+
         tools:layout="@layout/fragment_counselor_profile" />
     <fragment
         android:id="@+id/nav_tips"
@@ -34,22 +35,17 @@
     <fragment
         android:id="@+id/nav_difference"
         android:name="com.example.fullyminded.Fragments.DefinitionFragment"
-        android:label="Definition"
+        android:label="Definitions"
         tools:layout="@layout/fragment_definition" />
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.fullyminded.Fragments.MainFragment"
-        android:label="Home Page"
+        android:label="Home"
         tools:layout="@layout/fragment_main" />
-    <fragment
-        android:id="@+id/secondListPageFragment"
-        android:name="com.example.fullyminded.ListView.SecondListPageFragment"
-        android:label="fragment_second_list_page"
-        tools:layout="@layout/fragment_second_list_page" />
     <fragment
         android:id="@+id/nav_sign"
         android:name="com.example.fullyminded.Fragments.SignUpFragment"
-        android:label="Book Appt. "
+        android:label="Sign up"
         tools:layout="@layout/fragment_sign_up">
         <action
             android:id="@+id/action_signUpFragment_to_formFragment2"
@@ -59,6 +55,11 @@
         android:id="@+id/nav_settings"
         android:name="com.example.fullyminded.SettingsFragment"
         android:label="Settings" />
+    <fragment
+        android:id="@+id/nav_credits"
+        android:name="com.example.fullyminded.CreditsFragment"
+        android:label="Credits"
+        tools:layout="@layout/fragment_credits" />
 </navigation>
 
 

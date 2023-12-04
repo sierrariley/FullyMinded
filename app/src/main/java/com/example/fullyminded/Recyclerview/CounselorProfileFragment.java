@@ -18,6 +18,7 @@ import android.widget.Switch;
 
 import com.example.fullyminded.JavaBeans.Counselor;
 import com.example.fullyminded.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -77,7 +78,7 @@ public class CounselorProfileFragment extends Fragment {
 
         View view = inflater.inflate(R.layout.fragment_counselor_profile, container, false);
 
-
+        //Populating Arraylist for recycler view
         ArrayList<Counselor> counselor = new ArrayList<>();
         counselor.add(new Counselor("Marcus Walls", "MSW: Masters of Social Work"));
         counselor.add(new Counselor("Amanda Renaud", "PhD Social Work (University of Windsor)"));
@@ -86,24 +87,30 @@ public class CounselorProfileFragment extends Fragment {
         counselor.add(new Counselor("David Harris", "ICF Certified"));
         counselor.add(new Counselor("Amber Byrne", "ICF Certified"));
 
-
+        //Setting the adapter for view
         RecyclerView recyclerView = view.findViewById(R.id.recycle);
-
-//        recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
         recyclerView.setAdapter(new CounselorRecycleAdapter(counselor));
 
-
+        /**
+         * @preferences - hold the setting for recycler layout
+         * allows user to change layout to a grid view
+         * @preferences1 - hold the setting for snackbar
+         * snack bar gives a reminder to do the daily check in. If switchpreference is true, snackbar will show
+         */
       SharedPreferences preferences =  PreferenceManager.getDefaultSharedPreferences(getContext());
-
       Boolean switchPreference = preferences.getBoolean("grid_view", false);
-if(switchPreference){
-    recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
-}else{
-    recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
-}
+        if(switchPreference){
+            recyclerView.setLayoutManager(new StaggeredGridLayoutManager(2, LinearLayoutManager.VERTICAL));
+        }else{
+            recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        }
 
-
-
+        SharedPreferences preferences1 = PreferenceManager.getDefaultSharedPreferences(getContext());
+        Boolean notification = preferences1.getBoolean("switch_notification", true);
+        if(notification) {
+            Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content), "Don't forget to do your Daily Check In", Snackbar.LENGTH_LONG);
+            snackbar.show();
+        }
 
 
 

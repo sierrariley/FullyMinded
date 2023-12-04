@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
+    android:background="@color/offWhite"
     android:layout_height="match_parent">
 <TextView
         android:id="@+id/checkTitle"
@@ -53,9 +54,9 @@
         android:id="@+id/feelQuestion"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="5"
-        android:text="I am Feling..."
         android:layout_marginTop="20dp"
+        android:layout_weight="5"
+        android:text="I am Feeling..."
         android:textColor="@color/blueBlack"
         android:textSize="16sp"
         tools:layout_editor_absoluteX="0dp" />

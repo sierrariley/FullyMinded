@@ -21,5 +21,12 @@
             android:title="Font Size"
             app:summary="Please select a preferred font size"/>
     </PreferenceCategory>
+    <PreferenceCategory android:title="Notifictaion">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="switch_notification"
+            android:title="Daily Check In Notification" />
+    </PreferenceCategory>
 
 </PreferenceScreen>

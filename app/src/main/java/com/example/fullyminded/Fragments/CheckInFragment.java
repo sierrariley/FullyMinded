@@ -93,6 +93,7 @@ public class CheckInFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_check_in, container, false);
 
+        //Linking to fragment id's
         feelSeekBar = view.findViewById(R.id.seekBar);
         seekBarTextView = view.findViewById(R.id.seekBarTextView);
         sleepYes = view.findViewById(R.id.sleepYes);
@@ -103,7 +104,6 @@ public class CheckInFragment extends Fragment {
         focusNo = view.findViewById(R.id.focusNo);
         activityYes = view.findViewById(R.id.activityYes);
         activityNo = view.findViewById(R.id.activityNo);
-
         sleepGroup = view.findViewById(R.id.slepRadioButtons);
 
         TextView sleepText = view.findViewById(R.id.sleepQuestion);
@@ -112,7 +112,10 @@ public class CheckInFragment extends Fragment {
         TextView focusQ = view.findViewById(R.id.focusQuestion);
         TextView activityQ = view.findViewById(R.id.activityQuestion);
 
-        //Font size settings
+        /**
+         * @preferences - hold the setting for font sizing
+         * allows user to change the font size of text in app
+         */
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
         String selectedValue = preferences.getString("font_size", "16");
         seekBarTextView.setTextSize(Integer.parseInt(selectedValue));
@@ -123,25 +126,22 @@ public class CheckInFragment extends Fragment {
         activityQ.setTextSize(Integer.parseInt(selectedValue));
 
 
-        //This gives the response yes or no when sending the results in the email
+        //This sets the checked radio button to a string when emailed
         if(sleepYes.isChecked()){
             sleep = "Yes";
         }else{
             sleep = "No";
         }
-
         if(affirmYes.isChecked()){
             affirm = "Yes";
         }else{
             affirm = "No";
         }
-
         if(focusYes.isChecked()){
             focus = "Yes";
         }else{
             focus = "No";
         }
-
         if(activityYes.isChecked()){
             activity = "Yes";
         }else{
@@ -149,9 +149,17 @@ public class CheckInFragment extends Fragment {
         }
 
 
-
+        /**
+         * Setting the seek bar to a percent number
+         */
         feelSeekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
+            /**
+             * sets text of seek bar
+             * @seekbar
+             * @int 1
+             * @boolean b
+             */
             public void onProgressChanged(SeekBar seekBar, int i, boolean b) {
                 seekBarTextView.setText(i + " %");
                 percent = i;
@@ -175,7 +183,11 @@ public class CheckInFragment extends Fragment {
         resultsButton.setOnClickListener(new View.OnClickListener() {
             @Override
 
-            //Send results to Yourself to track and give to therapist or life coach at sessions
+            /**
+             * Send results to Yourself to track and give to therapist or life coach at sessions
+             * @view View
+             * Intent i uses ACTION_SEND to send email
+             */
             public void onClick(View view) {
                 Intent i = new Intent(Intent.ACTION_SENDTO);
                 i.setData(Uri.parse("mailto:"));
@@ -185,6 +197,7 @@ public class CheckInFragment extends Fragment {
                         "\n 3. I recited my affirmations today?: " + affirm +
                         "\n 4. Have I had a hard time focusing on tasks?: " + focus +
                         "\n 5. I have engaged in physical activity today: " + activity);
+
                 startActivity(i);
             }
         });

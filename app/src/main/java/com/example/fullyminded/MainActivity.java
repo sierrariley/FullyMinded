@@ -10,6 +10,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
+import androidx.navigation.NavOptions;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
@@ -68,12 +69,22 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * This method allows users to go to whichever dropdown they press
+     * Setting will take them to the app setting
+     * Credits will take them to the credits fragment
+     * @param item  The item that is in the drop down
+     * @return
+     */
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch (item.getItemId()){
             case R.id.action_settings:
                 navController.navigate(R.id.nav_settings);
+                break;
+            case R.id.action_credits:
+                navController.navigate(R.id.nav_credits);
                 break;
         }
         return super.onOptionsItemSelected(item);
