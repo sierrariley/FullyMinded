@@ -14,8 +14,8 @@ Download code from git repo: [click here](https://github.com/sierrariley/FullyMi
 - A daily check in questionnaire that can be emailed to yourslef and/or your counselor
 
 ## Screenshots
-![main page](app/src/main/res/drawable/mainpage.png) | ![reasons](app/src/main/res/drawable/reasons.png) 
-![signup](app/src/main/res/drawable/signup.png) | ![checkin](app/src/main/res/drawable/checkin.png)
+![main page](app/src/main/res/drawable/mainpage.png)[reasons](app/src/main/res/drawable/reasons.png) 
+![signup](app/src/main/res/drawable/signup.png)[checkin](app/src/main/res/drawable/checkin.png)
 ## Credits
 - Canva
 - <a href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1295319">OpenClipart-Vectors</a> from <a href="https://pixabay.com//?utm_source=link-attribution&utm_medium=referral&utm_campaign=image&utm_content=1295319">Pixabay</a>
