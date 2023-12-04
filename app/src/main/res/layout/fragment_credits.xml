@@ -41,7 +41,8 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="@string/image1"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textColorLink="@color/taupe" />
 
     <TextView
         android:id="@+id/textView11"
@@ -49,7 +50,8 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="@string/image2"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textColorLink="@color/taupe" />
 
     <TextView
         android:id="@+id/textView12"
@@ -57,7 +59,8 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="@string/image3"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textColorLink="@color/taupe" />
 
     <TextView
         android:id="@+id/textView13"
@@ -65,7 +68,8 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="@string/image4"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textColorLink="@color/taupe" />
 
     <TextView
         android:id="@+id/textView14"
@@ -73,7 +77,8 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="@string/image5"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textColorLink="@color/taupe" />
 
     <TextView
         android:id="@+id/textView15"
@@ -81,14 +86,16 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="@string/image6"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textColorLink="@color/taupe" />
 
     <TextView
         android:id="@+id/textView20"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="10dp"
-        android:text="@string/image7" />
+        android:text="@string/image7"
+        android:textColorLink="@color/taupe" />
 
     <TextView
         android:id="@+id/textView17"
@@ -105,5 +112,6 @@
         android:layout_height="wrap_content"
         android:padding="5dp"
         android:text="@string/reference"
-        android:textColor="@color/black" />
+        android:textColor="@color/black"
+        android:textColorLink="@color/taupe" />
 </LinearLayout>
