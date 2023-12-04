@@ -22,7 +22,7 @@
         android:id="@+id/therapy"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="cursive"
         android:padding="20dp"
         android:text="@string/therapy"
         android:textSize="34sp" />
@@ -39,7 +39,7 @@
         android:id="@+id/lifeCoach"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-black"
+        android:fontFamily="cursive"
         android:padding="20dp"
         android:text="@string/lifeCoach"
         android:textSize="34sp" />
