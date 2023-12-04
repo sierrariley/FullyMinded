@@ -1,4 +1,4 @@
-![Logo](res/drawable/fully.png)
+![Logo](app/src/main/res/drawable/logo.png)
 <h1 style="text-align:center">Welcome</h1>
 
 ## Description
