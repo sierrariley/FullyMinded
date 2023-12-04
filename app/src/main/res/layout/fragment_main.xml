@@ -6,27 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/offWhite"
     tools:context=".Fragments.MainFragment">
 
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
+        android:layout_height="150dp"
         android:layout_weight="0"
         android:adjustViewBounds="true"
         android:src="@drawable/newlogo" />
-
-    <TextView
-        android:id="@+id/welcome"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="0"
-        android:fontFamily="@font/akaya_telivigala"
-        android:text="Welcome "
-        android:textAlignment="center"
-        android:textColor="@color/babyBlue"
-        android:textSize="48sp"
-        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/who"
@@ -34,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_weight="0"
         android:text="Who Are We?"
-        android:textColor="@color/babyBlue"
+        android:textColor="@color/blueBlack"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -43,6 +32,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
+        android:padding="10dp"
         android:text="@string/whoAreWe"
         android:textColor="@color/blueBlack"
         android:textSize="16sp" />
@@ -52,9 +42,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="0"
-        android:text="@string/purpose"
+        android:padding="10dp"
         android:paddingTop="20dp"
+        android:text="@string/purpose"
         android:textColor="@color/blueBlack" />
+
+    <ImageView
+        android:id="@+id/helpImage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:src="@drawable/help" />
 
     <Button
         android:id="@+id/officialWebButton"

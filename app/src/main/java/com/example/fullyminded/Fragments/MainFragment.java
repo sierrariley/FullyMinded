@@ -11,7 +11,10 @@ import androidx.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.fullyminded.R;
@@ -71,6 +74,7 @@ public class MainFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         Uri webPage = Uri.parse("https://www.psychologytoday.com/ca?tr=Hdr_Brand");
+        ImageView imageView = view.findViewById(R.id.helpImage);
 
         Button webButton = view.findViewById(R.id.officialWebButton);
         webButton.setOnClickListener(new View.OnClickListener() {
@@ -89,6 +93,10 @@ public class MainFragment extends Fragment {
         String selectedValue = preferences.getString("font_size", "16");
       aboutText.setTextSize(Integer.parseInt(selectedValue));
       purpose.setTextSize(Integer.parseInt(selectedValue));
+
+        Animation fade = AnimationUtils.loadAnimation(getContext(), R.anim.anim_fade);
+        imageView.startAnimation(fade);
+
 
         return view;
     }

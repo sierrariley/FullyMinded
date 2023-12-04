@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/offWhite"
     tools:context=".CreditsFragment">
 
 
@@ -81,6 +82,13 @@
         android:padding="5dp"
         android:text="@string/image6"
         android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/textView20"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="@string/image7" />
 
     <TextView
         android:id="@+id/textView17"

@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import androidx.preference.PreferenceManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -93,6 +94,8 @@ public class FormFragment extends Fragment {
         insuranceNo = view.findViewById(R.id.insuranceNo);
         name = view.findViewById(R.id.nameFill);
         age = view.findViewById(R.id.ageTextField);
+
+
 
 
 
