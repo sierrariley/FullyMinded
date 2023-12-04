@@ -20,6 +20,7 @@ import android.widget.TextView;
 
 
 import com.example.fullyminded.R;
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -95,6 +96,13 @@ public class DefinitionFragment extends Fragment {
         String selectedValue = preferences.getString("font_size", "16");
         therpayDef.setTextSize(Integer.parseInt(selectedValue));
         lifeCoachDescript.setTextSize(Integer.parseInt(selectedValue));
+
+        SharedPreferences preferences1 = PreferenceManager.getDefaultSharedPreferences(getContext());
+        Boolean notification = preferences1.getBoolean("switch_notification", true);
+        if(notification) {
+            Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content), "Don't forget to do your Daily Check In", Snackbar.LENGTH_LONG);
+            snackbar.show();
+        }
 
 
 
