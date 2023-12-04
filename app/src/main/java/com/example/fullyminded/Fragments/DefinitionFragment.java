@@ -73,11 +73,17 @@ public class DefinitionFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-
         View view = inflater.inflate(R.layout.fragment_definition, container, false);
-
+        TextView therpayDef = view.findViewById(R.id.therapyDescript);
+        TextView lifeCoachDescript = view.findViewById(R.id.lifeCoachDescript);
         Button dailyAffirm = view.findViewById(R.id.affirmationButton);
+
+        /**
+         * This intent is to direct you to a social media page
+         * this page will give daily affirmations
+         * @view View
+         */
+
         Uri instaLink = Uri.parse("https://www.instagram.com/iam.affirmations/");
         dailyAffirm.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,11 +93,12 @@ public class DefinitionFragment extends Fragment {
             }
         });
 
-
-        TextView therpayDef = view.findViewById(R.id.therapyDescript);
-        TextView lifeCoachDescript = view.findViewById(R.id.lifeCoachDescript);
-
-        //Font size Settings
+        /**
+         * @preferences - hold the setting for font sizing
+         * allows user to change the font size of text in app
+         * @preferences1 - hold the setting for snackbar
+         * snack bar gives a reminder to do the daily check in. If switchpreference is true, snackbar will show
+         */
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
         String selectedValue = preferences.getString("font_size", "16");
         therpayDef.setTextSize(Integer.parseInt(selectedValue));

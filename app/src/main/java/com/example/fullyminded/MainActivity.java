@@ -69,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    /**
+     * This method allows users to go to whichever dropdown they press
+     * Setting will take them to the app setting
+     * Credits will take them to the credits fragment
+     * @param item  The item that is in the drop down
+     * @return
+     */
 
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {

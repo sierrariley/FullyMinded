@@ -91,13 +91,16 @@ public class MainFragment extends Fragment {
         TextView aboutText = view.findViewById(R.id.whoWeAreText);
         TextView purpose = view.findViewById(R.id.purposeText);
 
+        /**
+         * @preferences - hold the setting for font sizing
+         * allows user to change the font size of text in app
+         * @preferences1 - hold the setting for snackbar
+         * snack bar gives a reminder to do the daily check in. If switchpreference is true, snackbar will show
+         */
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
         String selectedValue = preferences.getString("font_size", "16");
-      aboutText.setTextSize(Integer.parseInt(selectedValue));
-      purpose.setTextSize(Integer.parseInt(selectedValue));
-
-        Animation fade = AnimationUtils.loadAnimation(getContext(), R.anim.anim_fade);
-        imageView.startAnimation(fade);
+         aboutText.setTextSize(Integer.parseInt(selectedValue));
+          purpose.setTextSize(Integer.parseInt(selectedValue));
 
         SharedPreferences preferences1 = PreferenceManager.getDefaultSharedPreferences(getContext());
         Boolean notification = preferences1.getBoolean("switch_notification", true);
@@ -106,7 +109,10 @@ public class MainFragment extends Fragment {
             snackbar.show();
         }
 
-//        Toast.makeText(getActivity(), "Don't forget to do your Daily Check In", Toast.LENGTH_LONG).show();
+
+        //Fade animation for image
+        Animation fade = AnimationUtils.loadAnimation(getContext(), R.anim.anim_fade);
+        imageView.startAnimation(fade);
 
 
 

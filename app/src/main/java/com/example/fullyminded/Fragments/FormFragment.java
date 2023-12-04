@@ -94,23 +94,19 @@ public class FormFragment extends Fragment {
         insuranceNo = view.findViewById(R.id.insuranceNo);
         name = view.findViewById(R.id.nameFill);
         age = view.findViewById(R.id.ageTextField);
+        Button sendButton = view.findViewById(R.id.sendRequestButton);
 
-
-
-
-
-//        Text startDate = view.findViewById(R.id.editTextDate);
+        //This will set the checked radio button to a string
         if(mentalHealth.isChecked()){
             choice = "Mental Health";
         }else{
             choice = "Life Coaching";
         }
 
-        Button sendButton = view.findViewById(R.id.sendRequestButton);
-
         /**
          * This onClickListener will allow user to email FullyMinded with their request. They will be emailed back.
-         * @param Intent i
+         * @view View
+         * @param Intent i uses ACTION_SEND to send an email
          */
         sendButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -126,7 +122,12 @@ public class FormFragment extends Fragment {
             }
         });
 
-        //Font size Setting
+        /**
+         * @preferences - hold the setting for font sizing
+         * allows user to change the font size of text in app
+         * @preferences1 - hold the setting for snackbar
+         * snack bar gives a reminder to do the daily check in. If switchpreference is true, snackbar will show
+         */
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
         String selectedValue = preferences.getString("font_size", "16");
         mentalHealth.setTextSize(Integer.parseInt(selectedValue));

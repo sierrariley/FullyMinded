@@ -14,6 +14,9 @@ public class CustomViewPagerAdapter extends FragmentStateAdapter {
 
     @NonNull
     @Override
+    /**
+     * @position - int Populates each page of the viewpager based on the position
+     */
     public Fragment createFragment(int position) {
         switch (position){
             case 0: return TipFragment.newInstance("Make a life of topics", "First vists can be awkward. having a list of topics to go over can help reduce anxiety.", R.drawable.list);
@@ -26,6 +29,10 @@ public class CustomViewPagerAdapter extends FragmentStateAdapter {
     }
 
     @Override
+    /**
+     * The viewpager will have 5 slides
+     * @return int (5)
+     */
     public int getItemCount() {
         return 5;
     }

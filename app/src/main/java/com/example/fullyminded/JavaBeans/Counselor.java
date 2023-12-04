@@ -1,5 +1,8 @@
 package com.example.fullyminded.JavaBeans;
 
+/**
+ * Counselor class
+ */
 public class Counselor {
     private String name;
     private String credentials;

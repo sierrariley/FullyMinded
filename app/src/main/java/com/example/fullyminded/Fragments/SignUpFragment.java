@@ -77,12 +77,16 @@ public class SignUpFragment extends Fragment {
         TextView onlineSignUp = view.findViewById(R.id.signUpOnline);
         TextView emerg = view.findViewById(R.id.emergText);
 
+        //This sets a transition animation
         NavOptions options = new NavOptions.Builder().
                 setEnterAnim(R.anim.anim_backin).
                 setExitAnim(R.anim.anim_backout).
                 build();
 
-        //Font sizing Setting
+        /**
+         * @preferences - hold the setting for font sizing
+         * allows user to change the font size of text in app
+         */
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
         String selectedValue = preferences.getString("font_size", "14");
         signUpFully.setTextSize(Integer.parseInt(selectedValue));
@@ -90,6 +94,11 @@ public class SignUpFragment extends Fragment {
         emerg.setTextSize(Integer.parseInt(selectedValue));
 
         Button call = view.findViewById(R.id.emergencyButton);
+        /**
+         * This calls the emergency hotline
+         * @view View
+         * Intent i uses ACTION_DIAL to call
+         */
         call.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -102,6 +111,10 @@ public class SignUpFragment extends Fragment {
             }
         });
 
+        /**
+         * @view View
+         * Intent i URI to access google maps and searches for therapy, life coach, counseling
+         */
         Button webButton = view.findViewById(R.id.webButton);
         webButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -112,7 +125,10 @@ public class SignUpFragment extends Fragment {
             }
         });
 
-
+        /**
+         * @view View
+         * Navigates to another fragment when button is pressed
+         */
         Button formButton = view.findViewById(R.id.formButton);
         formButton.setOnClickListener(new View.OnClickListener() {
             @Override

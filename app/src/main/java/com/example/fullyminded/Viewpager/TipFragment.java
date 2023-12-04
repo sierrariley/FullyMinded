@@ -91,6 +91,10 @@ public class TipFragment extends Fragment {
         Animation fade = AnimationUtils.loadAnimation(getContext(), R.anim.anim_fade);
         tipImage.startAnimation(fade);
 
+        /**
+         * @preferences1 - hold the setting for snackbar
+         * snack bar gives a reminder to do the daily check in. If switchpreference is true, snackbar will show
+         */
         SharedPreferences preferences1 = PreferenceManager.getDefaultSharedPreferences(getContext());
         Boolean notification = preferences1.getBoolean("switch_notification", true);
         if(notification) {

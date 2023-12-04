@@ -63,6 +63,9 @@ public class VPHost extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
+        /**
+         * This holds the content for the viewpager
+         */
         View view = inflater.inflate(R.layout.fragment_v_p_host, container, false);
         viewPager2 = view.findViewById(R.id.tipsViewPager);
         viewPager2.setAdapter(new CustomViewPagerAdapter(getActivity()));
