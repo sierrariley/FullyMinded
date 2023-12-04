@@ -10,6 +10,7 @@ import com.google.android.material.navigation.NavigationView;
 
 import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
+import androidx.navigation.NavOptions;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
@@ -74,6 +75,9 @@ public class MainActivity extends AppCompatActivity {
         switch (item.getItemId()){
             case R.id.action_settings:
                 navController.navigate(R.id.nav_settings);
+                break;
+            case R.id.action_credits:
+                navController.navigate(R.id.nav_credits);
                 break;
         }
         return super.onOptionsItemSelected(item);

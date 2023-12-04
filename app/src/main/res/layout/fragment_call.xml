@@ -4,6 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/offWhite"
     tools:context=".Fragments.FormFragment">
 
     <TextView
@@ -12,7 +13,7 @@
         android:layout_height="wrap_content"
         android:text="Online Sign Up"
         android:textAlignment="center"
-        android:textColor="@color/light_purple"
+        android:textColor="@color/blueBlack"
         android:textSize="20sp"
         android:textStyle="bold" />
 

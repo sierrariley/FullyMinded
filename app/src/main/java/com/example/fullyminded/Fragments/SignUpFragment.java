@@ -6,12 +6,14 @@ import android.net.Uri;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.NavOptions;
 import androidx.navigation.Navigation;
 import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -75,6 +77,11 @@ public class SignUpFragment extends Fragment {
         TextView onlineSignUp = view.findViewById(R.id.signUpOnline);
         TextView emerg = view.findViewById(R.id.emergText);
 
+        NavOptions options = new NavOptions.Builder().
+                setEnterAnim(R.anim.anim_backin).
+                setExitAnim(R.anim.anim_backout).
+                build();
+
         //Font sizing Setting
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(requireContext());
         String selectedValue = preferences.getString("font_size", "14");
@@ -110,7 +117,7 @@ public class SignUpFragment extends Fragment {
         formButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Navigation.findNavController(view).navigate(R.id.action_signUpFragment_to_formFragment2);
+                Navigation.findNavController(view).navigate(R.id.action_signUpFragment_to_formFragment2, null, options);
             }
         });
         return view;

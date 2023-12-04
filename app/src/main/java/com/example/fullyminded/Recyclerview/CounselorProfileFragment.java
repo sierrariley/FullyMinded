@@ -18,6 +18,7 @@ import android.widget.Switch;
 
 import com.example.fullyminded.JavaBeans.Counselor;
 import com.example.fullyminded.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import java.util.ArrayList;
 
@@ -102,7 +103,12 @@ public class CounselorProfileFragment extends Fragment {
         }
 
 
-
+        SharedPreferences preferences1 = PreferenceManager.getDefaultSharedPreferences(getContext());
+        Boolean notification = preferences1.getBoolean("switch_notification", true);
+        if(notification) {
+            Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content), "Don't forget to do your Daily Check In", Snackbar.LENGTH_LONG);
+            snackbar.show();
+        }
 
 
 

@@ -9,29 +9,23 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title">Fully Minded</string>
     <string name="therapy">Therapy</string>
     <string name="therapyDescript">Therapy’s main focus is on mental health as well as emotional healing. A patient would go to therapy if there was any concern with their mental health such as depression, anxiety, or any form of mental disorders. </string>
     <string name="lifeCoach">Life Coaching</string>
     <string name="lifeDecript">Life coaches do not have mental health training and cannot diagnose, but are there to help you set and achieve goals.</string>
-
     <string name="helpLine">If you are in distress, or are having suicidal thoughts, Please call the Emergency Help Line with the button below</string>
     <string name="bookFullyMinded">BOOK W/FullyMinded ONLINE</string>
     <string name="bookClose">BOOK W/NEAR BY FACILITY</string>
     <string name="bookFullytext">To book with FullyMinded Online services:</string>
     <string name="inperson">To book an in person appointment, click button below to find close Therapy Facilities </string>
     <string name="looking">What are you looking for?:</string>
-
-    <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
-
     <!-- Messages Preferences -->
     <string name="signature_title">Your signature</string>
     <string name="reply_title">Default reply action</string>
-
     <!-- Sync Preferences -->
     <string name="sync_title">Sync email periodically</string>
     <string name="attachment_title">Download incoming attachments</string>
@@ -41,5 +35,16 @@
 
     <string name="whoAreWe">We at FullyMinded are a gateway company to booking that first Therapy or Life Coaching session. We pride ourselves in being advocates to seeking help. </string>
     <string name="purpose">Why this app? We aim to steer you in the right direction. We have some online couselors readlily available to meet with you, or you can book appointments at near buy facilities or even by pressing the button below, you can search for a therapist on a secure website</string>
+
+    <string name="canva">Canva</string>
+    <string name="image1"><a href="https://pixabay.com/users/openclipart-vectors-30363/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1295319">OpenClipart-Vectors</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=1295319">Pixabay</a></string>
+    <string name="image2"><a href="https://pixabay.com/users/sdnet01-1309943/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=912694">Steve Adcock</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=912694">Pixabay</a></string>
+    <string name="image3"><a href="https://pixabay.com/users/gdj-1086657/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3350778">Gordon Johnson</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3350778">Pixabay</a></string>
+    <string name="image4"><a href="https://pixabay.com/users/mohamed_hassan-5229782/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=7717987">Mohamed Hassan</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=7717987">Pixabay</a></string>
+    <string name="image5"><a href="https://pixabay.com/users/clker-free-vector-images-3736/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=42803">Clker-Free-Vector-Images</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=42803">Pixabay</a></string>
+    <string name="image6"><a href="https://pixabay.com/users/cripi-1028451/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3060993">Christelle Olivier</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=3060993">Pixabay</a></string>
+    <string name="image7"><a href="https://pixabay.com/users/mohamed_hassan-5229782/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=7018783">Mohamed Hassan</a> from <a href="https://pixabay.com//?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=7018783">Pixabay</a></string>
+    <string name="reference">Choosing Therapy <a href="https://www.choosingtherapy.com/prepare-for-first-therapy-session/">Guide</a> </string>
+
 
 </resources>

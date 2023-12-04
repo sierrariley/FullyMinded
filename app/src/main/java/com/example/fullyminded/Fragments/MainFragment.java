@@ -11,10 +11,15 @@ import androidx.preference.PreferenceManager;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.fullyminded.R;
+import com.google.android.material.snackbar.Snackbar;
 
 import org.w3c.dom.Text;
 
@@ -71,6 +76,7 @@ public class MainFragment extends Fragment {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_main, container, false);
         Uri webPage = Uri.parse("https://www.psychologytoday.com/ca?tr=Hdr_Brand");
+        ImageView imageView = view.findViewById(R.id.helpImage);
 
         Button webButton = view.findViewById(R.id.officialWebButton);
         webButton.setOnClickListener(new View.OnClickListener() {
@@ -89,6 +95,20 @@ public class MainFragment extends Fragment {
         String selectedValue = preferences.getString("font_size", "16");
       aboutText.setTextSize(Integer.parseInt(selectedValue));
       purpose.setTextSize(Integer.parseInt(selectedValue));
+
+        Animation fade = AnimationUtils.loadAnimation(getContext(), R.anim.anim_fade);
+        imageView.startAnimation(fade);
+
+        SharedPreferences preferences1 = PreferenceManager.getDefaultSharedPreferences(getContext());
+        Boolean notification = preferences1.getBoolean("switch_notification", true);
+        if(notification) {
+            Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content), "Don't forget to do your Daily Check In", Snackbar.LENGTH_LONG);
+            snackbar.show();
+        }
+
+//        Toast.makeText(getActivity(), "Don't forget to do your Daily Check In", Toast.LENGTH_LONG).show();
+
+
 
         return view;
     }

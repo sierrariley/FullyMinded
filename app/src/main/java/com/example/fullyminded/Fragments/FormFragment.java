@@ -8,6 +8,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 import androidx.preference.PreferenceManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -96,6 +97,8 @@ public class FormFragment extends Fragment {
 
 
 
+
+
 //        Text startDate = view.findViewById(R.id.editTextDate);
         if(mentalHealth.isChecked()){
             choice = "Mental Health";
@@ -132,6 +135,13 @@ public class FormFragment extends Fragment {
         insuranceNo.setTextSize(Integer.parseInt(selectedValue));
         name.setTextSize(Integer.parseInt(selectedValue));
         age.setTextSize(Integer.parseInt(selectedValue));
+
+        SharedPreferences preferences1 = PreferenceManager.getDefaultSharedPreferences(getContext());
+        Boolean notification = preferences1.getBoolean("switch_notification", true);
+        if(notification) {
+            Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content), "Don't forget to do your Daily Check In", Snackbar.LENGTH_LONG);
+            snackbar.show();
+        }
 
 
 

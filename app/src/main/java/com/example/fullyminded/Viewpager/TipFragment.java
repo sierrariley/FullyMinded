@@ -1,16 +1,21 @@
 package com.example.fullyminded.Viewpager;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.preference.PreferenceManager;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.fullyminded.R;
+import com.google.android.material.snackbar.Snackbar;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -82,6 +87,16 @@ public class TipFragment extends Fragment {
             tipImage.setImageResource(mParam3);
         }
 
+        //Fade Animations for Images
+        Animation fade = AnimationUtils.loadAnimation(getContext(), R.anim.anim_fade);
+        tipImage.startAnimation(fade);
+
+        SharedPreferences preferences1 = PreferenceManager.getDefaultSharedPreferences(getContext());
+        Boolean notification = preferences1.getBoolean("switch_notification", true);
+        if(notification) {
+            Snackbar snackbar = Snackbar.make(getActivity().findViewById(android.R.id.content), "Don't forget to do your Daily Check In", Snackbar.LENGTH_LONG);
+            snackbar.show();
+        }
 
         return view;
     }
